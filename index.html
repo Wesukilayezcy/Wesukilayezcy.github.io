@@ -167,7 +167,7 @@
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/08/我的第一篇博客文章/">我的第一篇博客文章</a>
+      <a class="article-title" href="/2019/07/08/我的第一篇博客文章/">大数据学习</a>
     </h1>
   
 
@@ -180,11 +180,166 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>内容</p>
+        <h1 id="Day1"><a href="#Day1" class="headerlink" title="Day1"></a>Day1</h1><h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><font color="#D2691E" size="6">准备</font></h2><hr>
+<p>安装VMware，并安装Centos，选择无界面安装</p>
+<table>
+<thead>
+<tr>
+<th>过程</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>虚拟机：VMware workstation11 Linux系统：CentOS-6.5-x86_64-bin-DVD1.iso</td>
+<td>不带系统的笔记本或者台式类似win7 win8.1 win10 mac 等操作系统</td>
+</tr>
+</tbody></table>
 <hr>
-<h2 id="第二章"><a href="#第二章" class="headerlink" title="第二章"></a>第二章</h2><p>内容</p>
+<h2 id="Linux基本知识"><a href="#Linux基本知识" class="headerlink" title="Linux基本知识"></a><font color="#D2691E" size="6">Linux基本知识</font></h2><hr>
+<h3 id="Linux目录结构"><a href="#Linux目录结构" class="headerlink" title="Linux目录结构"></a><font color="#D2691E" size="5">Linux目录结构</font></h3><table>
+<thead>
+<tr>
+<th>目录</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>/</td>
+<td>Linux系统的根目录，一般只存放目录</td>
+</tr>
+<tr>
+<td>/bin和/usr/bin</td>
+<td>命令（二进制）文件目录，包含可供root 用户和普通用户所使用的Linux命令和二进制文件，包含shell解析器等</td>
+</tr>
+<tr>
+<td>/boot</td>
+<td>系统引导和内核目录，存放引导装载文件</td>
+</tr>
+<tr>
+<td>/dev</td>
+<td>设备目录，存放各个硬件设备的信息，例如光驱、硬盘等</td>
+</tr>
+<tr>
+<td>/etc</td>
+<td>系统级别的配置文件存放的目录，一般由配置管理员来使用</td>
+</tr>
+<tr>
+<td>/home</td>
+<td>所有普通用户的家目录</td>
+</tr>
+<tr>
+<td>/opt</td>
+<td>给主机额外安装软件所摆放的目录</td>
+</tr>
+<tr>
+<td>/root</td>
+<td>root用户的的根目录</td>
+</tr>
+<tr>
+<td>/tmp</td>
+<td>存放应用程序产生的临时数据不能在此目录下存放重要数据</td>
+</tr>
+<tr>
+<td>/var</td>
+<td>系统一般运行时需要改变的数据</td>
+</tr>
+<tr>
+<td>/usr</td>
+<td>应用程序相关目录命令、函数库、共享包、内核源码</td>
+</tr>
+</tbody></table>
 <hr>
-<p>##参考文献</p>
+<h3 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a><font color="#D2691E" size="5">常用命令</font></h3><hr>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>cd /</td>
+<td>切换路径</td>
+</tr>
+<tr>
+<td>cd ..</td>
+<td>回到上一层路径</td>
+</tr>
+<tr>
+<td>ls</td>
+<td>查看当前目录下所有文件和文件夹</td>
+</tr>
+<tr>
+<td>ls -a</td>
+<td>显示隐藏文件</td>
+</tr>
+<tr>
+<td>ls -l</td>
+<td>查看详细信息（ll）</td>
+</tr>
+<tr>
+<td>mkdir</td>
+<td>创建文件夹</td>
+</tr>
+<tr>
+<td>touch</td>
+<td>创建文件</td>
+</tr>
+<tr>
+<td>mv /lx /opt/</td>
+<td>移动（剪切）</td>
+</tr>
+<tr>
+<td>mv lx xxx</td>
+<td>重命名</td>
+</tr>
+<tr>
+<td>cp lx.txt /opt/</td>
+<td>复制粘贴</td>
+</tr>
+<tr>
+<td>vi xxx</td>
+<td>打开文件</td>
+</tr>
+<tr>
+<td>i</td>
+<td>进去编辑模式</td>
+</tr>
+<tr>
+<td>esc</td>
+<td>退出编辑模式</td>
+</tr>
+<tr>
+<td>:wq!</td>
+<td>w:写入   q：退出   ！：强制</td>
+</tr>
+<tr>
+<td>rm -rf ***</td>
+<td>递归删除文件或者文件夹 r:递归 f：强制</td>
+</tr>
+<tr>
+<td>pwd</td>
+<td>显示当前所在路径</td>
+</tr>
+<tr>
+<td>ll</td>
+<td>查看详细信息第一个字母：l：链接，d：文件夹，-：文件，第二三四个字母：当前用户的权限r：可读w：可写x：可执行第五六七个字母：当前用户组权限r：可读w：可写x：可执行</td>
+</tr>
+<tr>
+<td>reboot</td>
+<td>重启</td>
+</tr>
+</tbody></table>
+<hr>
+<h1 id="Day2"><a href="#Day2" class="headerlink" title="Day2"></a>Day2</h1><p>内容</p>
+<hr>
+<h1 id="Day4"><a href="#Day4" class="headerlink" title="Day4"></a>Day4</h1><hr>
+<h1 id="day5"><a href="#day5" class="headerlink" title="day5"></a>day5</h1><hr>
+<h1 id="day6"><a href="#day6" class="headerlink" title="day6"></a>day6</h1><hr>
+<h1 id="day7"><a href="#day7" class="headerlink" title="day7"></a>day7</h1><hr>
+<h1 id="day8"><a href="#day8" class="headerlink" title="day8"></a>day8</h1><hr>
+<h1 id="day3"><a href="#day3" class="headerlink" title="day3"></a>day3</h1><hr>
+<h1 id="day9"><a href="#day9" class="headerlink" title="day9"></a>day9</h1><hr>
 <p><span id="busuanzi_container_page_pv">  本文总阅读量<span id="busuanzi_value_page_pv"></span>次</span></p>
 
       
