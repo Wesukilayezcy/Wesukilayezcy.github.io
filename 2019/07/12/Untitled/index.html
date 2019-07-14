@@ -4,19 +4,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Wesukilayezcy的博客</title>
+  <title>大数据学习 Day2 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+  <meta name="description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
 <meta name="keywords" content="iOS，Python,程序猿，程序媛，编程，代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wesukilayezcy的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数据学习 Day2">
+<meta property="og:url" content="http://yoursite.com/2019/07/12/Untitled/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
-<meta property="og:description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+<meta property="og:description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-14T15:35:31.543Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wesukilayezcy的博客">
-<meta name="twitter:description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+<meta name="twitter:title" content="大数据学习 Day2">
+<meta name="twitter:description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -166,16 +167,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Untitled" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Untitled" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/Untitled/">大数据学习 Day2</a>
+    <h1 class="article-title" itemprop="name">
+      大数据学习 Day2
     </h1>
   
 
@@ -191,11 +190,311 @@ var _hmt = _hmt || [];
         <h5 id="1-修改主机名："><a href="#1-修改主机名：" class="headerlink" title="1.修改主机名："></a><font color="#D2691E" size="5">1.修改主机名：</font></h5><p><code>sudo vi /etc/sysconfig/network</code></p>
 <p>o:在当前行的下一行进入编辑模式</p>
 <p>加入一句话：<br><code>HOSTNAME=master</code></p>
-        
-          <a class="article-more-a" href="/2019/07/12/Untitled/#more">more >></a>
-        
+<a id="more"></a>
+<h5 id="2-修改域名解析文件"><a href="#2-修改域名解析文件" class="headerlink" title="2.修改域名解析文件"></a><font color="#D2691E" size="5">2.修改域名解析文件</font></h5><p><code>sudo vi /etc/hostname</code></p>
+<p>删除默认那句话，然后加入：<br>master</p>
+<p>reboot：重启机器</p>
+<h5 id="3-关闭防火墙"><a href="#3-关闭防火墙" class="headerlink" title="3.关闭防火墙"></a><font color="#D2691E" size="5">3.关闭防火墙</font></h5><p>查看防火墙状态<br><code>sudo firewall-cmd --state</code></p>
+<p>临时关闭防火墙<br><code>sudo systemctl stop firewalld.service</code></p>
+<p>禁止开机自启动防火墙<br><code>systemctl disable firewalld.service</code></p>
+<h5 id="4-克隆master两份分别命名为slave0-slave1"><a href="#4-克隆master两份分别命名为slave0-slave1" class="headerlink" title="4:克隆master两份分别命名为slave0,slave1"></a><font color="#D2691E" size="5">4:克隆master两份分别命名为slave0,slave1</font></h5><h5 id="5-修改slave0各种名称为slave0，以及slave1名称。"><a href="#5-修改slave0各种名称为slave0，以及slave1名称。" class="headerlink" title="5.修改slave0各种名称为slave0，以及slave1名称。"></a><font color="#D2691E" size="5">5.修改slave0各种名称为slave0，以及slave1名称。</font></h5><p>slave0:</p>
+<p><code>sudo vi /etc/sysconfig/network</code></p>
+<p>o:字母o进入编辑模式</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HOSTNAME=slave0</span><br><span class="line"></span><br><span class="line">esc</span><br><span class="line"></span><br><span class="line">:wq!</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>sudo vi /etc/hostname</code></p>
+<p>i:进入编辑模式<br>删除里面文件内容master改成</p>
+<p>slave0</p>
+<p><code>reboot</code></p>
+<p>slave1:</p>
+<p><code>sudo vi /etc/sysconfig/network</code></p>
+<p>o:字母o进入编辑模式</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HOSTNAME=slave1</span><br><span class="line"></span><br><span class="line">esc</span><br><span class="line"></span><br><span class="line">:wq!</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>sudo vi /etc/hostname</code></p>
+<p>i:进入编辑模式,删除里面文件内容master改成slave1</p>
+<p><code>reboot</code></p>
+<p><font color="red" size="5">注意：</font></p>
+<p>1.三台机器防火墙都处于永久关闭状态</p>
+<p>2.三台机器名称都对应了</p>
+<p>3.保证三台机器能相互ping通</p>
+<h5 id="6：安装远程连接工具并修改hosts文件"><a href="#6：安装远程连接工具并修改hosts文件" class="headerlink" title="6：安装远程连接工具并修改hosts文件"></a><font color="#D2691E" size="5">6：安装远程连接工具并修改hosts文件</font></h5><p>master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.44.166	master</span><br><span class="line"></span><br><span class="line">192.168.44.167	slave0</span><br><span class="line"></span><br><span class="line">192.168.44.168	slave1</span><br></pre></td></tr></tbody></table></figure>
+
+<p>测试master能不能ping通slave0跟slave1</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">master:</span><br><span class="line"></span><br><span class="line">ping 192.168.44.167</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping slave0</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping 192.168.44.168</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping slave1</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br></pre></td></tr></tbody></table></figure>
+
+<p>将master下面的配置好的hosts文件传输给另外两台机器slave0跟slave1</p>
+<p>master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo scp /etc/hosts root@slave0:/etc/hosts</span><br><span class="line"></span><br><span class="line">sudo scp /etc/hosts root@slave1:/etc/hosts</span><br></pre></td></tr></tbody></table></figure>
+
+<p>查看slave0跟slave1中的hosts文件</p>
+<p>slave0:</p>
+<p><code>cat /etc/hosts</code></p>
+<p>slave1:</p>
+<p><code>cat /etc/hosts</code></p>
+<p>测试三台机器能不能用master，slave0，slave1代替IP地址相互ping通</p>
+<h5 id="7：配置无密登录"><a href="#7：配置无密登录" class="headerlink" title="7：配置无密登录"></a><font color="#D2691E" size="5">7：配置无密登录</font></h5><p>Mster,slave0,slave1:</p>
+<p><code>ssh-keygen</code></p>
+<p>master到slave0的无密登录：</p>
+<p>master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@slave0:~/.ssh/master.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>slave0：</p>
+<p><code>cd ~/.ssh</code></p>
+<p><code>ls</code></p>
+<p>创建文件</p>
+<p><code>touch authorized_keys</code></p>
+<p>修改文件权限</p>
+<p><code>chmod 600 authoried_keys</code></p>
+<p>复制master.pub文件内容然后追加到authorized_keys这个文件末尾</p>
+<p><code>cat master.pub >> authorized_keys</code></p>
+<p>master:</p>
+<p>测试master远程登录slave0,发现不需要再输入密码则可以直接登录slave0</p>
+<p><code>ssh root@slave0</code></p>
+<p><code>exit</code></p>
+<p>master到slave1无密码登录：</p>
+<p>master：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@slave1:~/.ssh/master.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>slave1:</p>
+<p><code>cd ~/.ssh</code></p>
+<p><code>ls</code></p>
+<p>创建文件</p>
+<p><code>touch authorized_keys</code></p>
+<p>修改文件权限</p>
+<p><code>chmod 600 authoried_keys</code></p>
+<p>复制master.pub文件内容然后追加到authorized_keys这个文件末尾</p>
+<p><code>cat master.pub >> authorized_keys</code></p>
+<p>测试master远程登录slave1,发现不需要再输入密码则可以直接登录slave1</p>
+<p>master:</p>
+<p><code>ssh root@slave1</code></p>
+<p><code>exit</code></p>
+<p>slave1到master无密码登录：</p>
+<p>slave1：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@master:~/.ssh/slave1.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>master:</p>
+<p><code>cd ~/.ssh</code></p>
+<p><code>ls</code></p>
+<p>创建文件</p>
+<p><code>touch authorized_keys</code></p>
+<p>修改文件权限</p>
+<p><code>chmod 600 authoried_keys</code></p>
+<p>复制slave1.pub文件内容然后追加到authorized_keys这个文件末尾</p>
+<p><code>cat slave1.pub >> authorized_keys</code></p>
+<p>测试slave1远程登录master,发现不需要再输入密码则可以直接登录master</p>
+<p>slave1:</p>
+<p><code>ssh root@master</code></p>
+<p><code>exit</code></p>
+<p>slave0到master无密码登录：</p>
+<p>slave0：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@master:~/.ssh/slave0.pub</span><br></pre></td></tr></tbody></table></figure>
+
+<p>master:</p>
+<p><code>cd ~/.ssh</code></p>
+<p><code>ls</code></p>
+<p>(以下两部之前已经做过就不用做了：</p>
+<p>创建文件</p>
+<p><code>touch authorized_keys</code></p>
+<p>修改文件权限</p>
+<p><code>chmod 600 authoried_keys</code></p>
+<p>)</p>
+<p>复制slave0.pub文件内容然后追加到authorized_keys这个文件末尾</p>
+<p><code>cat slave0.pub >> authorized_keys</code></p>
+<p>测试slave0远程登录master,发现不需要再输入密码则可以直接登录master</p>
+<p>slave0:</p>
+<p><code>ssh root@master</code></p>
+<p><code>exit</code></p>
+<p>master到master无密码登录：</p>
+<p>master：</p>
+<p><code>cd ~/.ssh</code></p>
+<p><code>ls</code></p>
+<p>(以下两部之前已经做过就不用做了：<br>创建文件</p>
+<p><code>touch authorized_keys</code></p>
+<p>修改文件权限</p>
+<p><code>chmod 600 authoried_keys</code><br>)</p>
+<p>复制id_rsa.pub文件内容然后追加到authorized_keys这个文件末尾</p>
+<p><code>cat id_rsa.pub >> authorized_keys</code></p>
+<p>测试master远程登录master,发现不需要再输入密码则可以直接登录master</p>
+<p>master:</p>
+<p><code>ssh root@master</code></p>
+<p><code>exit</code></p>
+<p><font color="#D2691E" size="5">拓展:</font></p>
+<p>文件权限：<br>- rwx —  —</p>
+<p>第一个字母：<br>-  普通文件</p>
+<p>l  类似快捷方式</p>
+<p>d  文件夹</p>
+<p>第二、三、四个字母：当前用户对该文件的权限</p>
+<p>r:是否可读</p>
+<p>w:是否可写</p>
+<p>x:是否可执行</p>
+<p>第五、六、七个字母：当前用户组对该文件的权限</p>
+<p>r:是否可读</p>
+<p>w:是否可写</p>
+<p>x:是否可执行</p>
+<p>第八、九、十个字母：其他用户对该文件的权限</p>
+<p>r:是否可读</p>
+<p>w:是否可写</p>
+<p>x:是否可执行</p>
+<p>chmod 600 </p>
+<p>0    000</p>
+<p>1    001</p>
+<p>2    010</p>
+<p>3    011</p>
+<p>4    100</p>
+<p>5    101</p>
+<p>6    110</p>
+<p>7    111</p>
+<table>
+<thead>
+<tr>
+<th>-</th>
+<th>-</th>
+<th>x</th>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+<th>-</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>r</td>
+<td>w</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>6</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+<td></td>
+<td>0</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>7</td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+<td></td>
+<td>7</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>r</td>
+<td>w</td>
+<td>x</td>
+<td>r</td>
+<td>w</td>
+<td>x</td>
+<td>r</td>
+<td>w</td>
+<td>x</td>
+</tr>
+<tr>
+<td>-</td>
+<td>w</td>
+<td>-</td>
+<td>r</td>
+<td>-</td>
+<td>x</td>
+<td>r</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>0</td>
+<td>1</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>2</td>
+<td></td>
+<td></td>
+<td>5</td>
+<td></td>
+<td></td>
+<td>4</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -204,16 +503,75 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/12/Untitled/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/07/12/Untitled/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/07/08/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大数据学习 Day1</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -233,149 +591,14 @@ var _hmt = _hmt || [];
 
 
 
-
   
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/08/我的第一篇博客文章/">大数据学习 Day1</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/08/我的第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-07-08T12:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><font color="#D2691E" size="6">准备</font></h2><hr>
-<p>安装VMware，并安装Centos,有无界面都可，无界面效率高</p>
-        
-          <a class="article-more-a" href="/2019/07/08/我的第一篇博客文章/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/08/我的第一篇博客文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/08/hello-world/">Hello World</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/08/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-08T12:49:47.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/08/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
   
+
   
 
 
@@ -398,8 +621,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
