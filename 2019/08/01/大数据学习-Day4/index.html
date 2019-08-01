@@ -4,19 +4,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Wesukilayezcy的博客</title>
+  <title>大数据学习 Day4 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+  <meta name="description" content="1.配置伪分布式yarn：123456789cd /opt/hadoop-2.6.4/etc/hadoop/pwdlscp mapred-site.xml.template mapred-site.xmlvi mapred-site.xml">
 <meta name="keywords" content="iOS，Python,程序猿，程序媛，编程，代码">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Wesukilayezcy的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大数据学习 Day4">
+<meta property="og:url" content="http://yoursite.com/2019/08/01/大数据学习-Day4/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
-<meta property="og:description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+<meta property="og:description" content="1.配置伪分布式yarn：123456789cd /opt/hadoop-2.6.4/etc/hadoop/pwdlscp mapred-site.xml.template mapred-site.xmlvi mapred-site.xml">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-08-01T05:19:29.094Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Wesukilayezcy的博客">
-<meta name="twitter:description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
+<meta name="twitter:title" content="大数据学习 Day4">
+<meta name="twitter:description" content="1.配置伪分布式yarn：123456789cd /opt/hadoop-2.6.4/etc/hadoop/pwdlscp mapred-site.xml.template mapred-site.xmlvi mapred-site.xml">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -166,281 +167,14 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-大数据学习-Day8" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-大数据学习-Day4" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day8/">大数据学习 Day8</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/01/大数据学习-Day8/" class="archive-article-date">
-  	<time datetime="2019-08-01T05:07:27.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>对之前爬虫爬到的智联招聘的数据进行mapreduce处理，再进行数据分析<br>上传招聘数据到分布式文件系统</p>
-<p><code>hdfs dfs –put /opt/zl0507.csv /</code></p>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day8/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day8/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-大数据学习-Day7" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day7/">大数据学习 Day7</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/01/大数据学习-Day7/" class="archive-article-date">
-  	<time datetime="2019-08-01T04:58:47.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="eclipse上编写mapreduce程序，进行词频统计"><a href="#eclipse上编写mapreduce程序，进行词频统计" class="headerlink" title="eclipse上编写mapreduce程序，进行词频统计"></a>eclipse上编写mapreduce程序，进行词频统计</h5><p>开启分布式文件系统（这里为伪分布），将/opt/input/test.txt文件上传到分布式文件系统中的/input下<br><code>hdfs dfs –put /opt/input/test.txt /input/</code></p>
-<ol>
-<li><p>保证安装好jdk_1.8.0_32bit</p>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day7/#more">more >></a>
-        
-      
-
-      
-    </li></ol></div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day7/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-大数据学习-Day6" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day6/">大数据学习 Day6</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/01/大数据学习-Day6/" class="archive-article-date">
-  	<time datetime="2019-08-01T04:57:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="智联招聘数据爬取"><a href="#智联招聘数据爬取" class="headerlink" title="智联招聘数据爬取"></a>智联招聘数据爬取</h5><p>利用爬虫，爬取智联招聘的数据，其中因为智联招聘网站对爬虫进行了反爬机制，从网页源码爬不到div下面的内容，于是采用了获取json数据进行分析：</p>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day6/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day6/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-大数据学习-Day5" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day5/">大数据学习 Day5</a>
-    </h1>
-  
-
-        
-        <a href="/2019/08/01/大数据学习-Day5/" class="archive-article-date">
-  	<time datetime="2019-08-01T04:55:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h4 id="安装Anaconda配置python环境"><a href="#安装Anaconda配置python环境" class="headerlink" title="安装Anaconda配置python环境"></a>安装Anaconda配置python环境</h4><p>python基本语法的讲解：变量类型、字典，循环结构，元组</p>
-<p>requests包的基本讲解：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">resp=requests.get('URL')请求url  </span><br><span class="line">resp.text  获得网页文本  </span><br><span class="line">resp.content 获得网页内容（二进制）  </span><br><span class="line">resp.encoding  查看网页编码  </span><br><span class="line">resp.status_code 查看网页状态码  </span><br><span class="line">resp.json() 获取json数据  </span><br><span class="line">resp.headers 查看头部信息</span><br></pre></td></tr></tbody></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day5/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day5/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-大数据学习-Day4" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day4/">大数据学习 Day4</a>
+    <h1 class="article-title" itemprop="name">
+      大数据学习 Day4
     </h1>
   
 
@@ -454,11 +188,344 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <h5 id="1-配置伪分布式yarn："><a href="#1-配置伪分布式yarn：" class="headerlink" title="1.配置伪分布式yarn："></a><font color="#D2691E" size="5">1.配置伪分布式yarn：</font></h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/hadoop-2.6.4/etc/hadoop/</span><br><span class="line"></span><br><span class="line">pwd</span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line"></span><br><span class="line">cp mapred-site.xml.template mapred-site.xml</span><br><span class="line"></span><br><span class="line">vi mapred-site.xml</span><br></pre></td></tr></tbody></table></figure>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day4/#more">more >></a>
-        
+
+<a id="more"></a>
+<p>在 configuration中间加入下面配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><configuration></configuration></span><br><span class="line">        <property></property></span><br><span class="line">                <name>mapreduce.framework.name</name></span><br><span class="line">                <value>yarn</value></span><br><span class="line">    </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>vi yarn-site.xml</code></p>
+<p>在configuration中间加入下面配置：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><property></property></span><br><span class="line">               <name>yarn.nodemanager.aux-services</name></span><br><span class="line">               <value>mapreduce_shuffle</value></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>测试：启动yarn</p>
+<p><code>/opt/hadoop-2.6.4/sbin/start-yarn.sh</code></p>
+<p><code>jps</code>查看是否有</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">resourcemanager</span><br><span class="line">NodeManager</span><br></pre></td></tr></tbody></table></figure>
+
+<p>浏览中查看 192.168.31.128:8088</p>
+<h5 id="2-HDFS常用命令："><a href="#2-HDFS常用命令：" class="headerlink" title="2.HDFS常用命令："></a><font color="#D2691E" size="5">2.HDFS常用命令：</font></h5><table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>-help [cmd]</td>
+<td>显示命令的帮助信息</td>
+</tr>
+<tr>
+<td>-ls(r) path</td>
+<td>显示当前目录下所有文件</td>
+</tr>
+<tr>
+<td>-du(s) path</td>
+<td>显示目录中所有文件大小</td>
+</tr>
+<tr>
+<td>-count[-q] path</td>
+<td>显示目录中文件数量</td>
+</tr>
+<tr>
+<td>-mv src dst</td>
+<td>移动多个文件到目标目录</td>
+</tr>
+<tr>
+<td>-cp src dst</td>
+<td>复制多个文件到目标目录</td>
+</tr>
+<tr>
+<td>-rm(r)</td>
+<td>删除文件(夹)</td>
+</tr>
+<tr>
+<td>-put localsrc dst</td>
+<td>本地文件复制到hdfs</td>
+</tr>
+<tr>
+<td>-copyFromLocal</td>
+<td>同put</td>
+</tr>
+<tr>
+<td>-moveFromLocal</td>
+<td>从本地文件移动到hdfs</td>
+</tr>
+<tr>
+<td>-get [-ignoreCrc] src localdst</td>
+<td>复制文件到本地，可以忽略crc校验</td>
+</tr>
+<tr>
+<td>-getmerge src localdst</td>
+<td>将源目录中的所有文件排序合并到一个文件中</td>
+</tr>
+<tr>
+<td>-cat src</td>
+<td>在终端显示文件内容</td>
+</tr>
+<tr>
+<td>-text src</td>
+<td>在终端显示文件内容</td>
+</tr>
+<tr>
+<td>-copyToLocal [-ignoreCrc] src localdst</td>
+<td>复制到本地</td>
+</tr>
+<tr>
+<td>-moveToLocal src localdst</td>
+<td>移动</td>
+</tr>
+<tr>
+<td>-mkdir path</td>
+<td>创建文件夹</td>
+</tr>
+<tr>
+<td>-touchz path</td>
+<td>创建一个空文件</td>
+</tr>
+</tbody></table>
+<h5 id="3-停止伪分布式："><a href="#3-停止伪分布式：" class="headerlink" title="3.停止伪分布式："></a><font color="#D2691E" size="5">3.停止伪分布式：</font></h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.6.4/sbin/stop-yarn.sh</span><br><span class="line">/opt/hadoop-2.6.4/sbin/stop-dfs.sh</span><br><span class="line">jps</span><br></pre></td></tr></tbody></table></figure>
+
+<p>(如有多余的进程则用kill -9 强制杀掉)</p>
+<h5 id="4-配置分布式集群："><a href="#4-配置分布式集群：" class="headerlink" title="4.配置分布式集群："></a><font color="#D2691E" size="5">4.配置分布式集群：</font></h5><p> <code>cd /opt/hadoop-2.6.4/etc/hadoop</code></p>
+<p> 编辑core-site.xml,指定namenode为master机器，Master为集群老大</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">vi core-site.xml </span><br><span class="line"><configuration></configuration></span><br><span class="line">        <property></property></span><br><span class="line">                <name>fs.defaultFS</name></span><br><span class="line">                <value>hdfs://master:9000</value></span><br><span class="line">        </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>编辑hdfs-site.xml，指定Namenode存储路径，指定数据节点DataNode存储路径，<br>指定副本数量。</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">vi hdfs-site.xml</span><br><span class="line"></span><br><span class="line"><configuration></configuration></span><br><span class="line">        <property></property></span><br><span class="line">                <name>dfs.namenode.name.dir</name></span><br><span class="line">                <value>/opt/dfs/name</value></span><br><span class="line">        </span><br><span class="line">	<property></property></span><br><span class="line">                <name>dfs.datanode.data.dir</name></span><br><span class="line">                <value>/opt/dfs/data</value></span><br><span class="line">        </span><br><span class="line">	<property></property></span><br><span class="line">                <name>dfs.replication</name></span><br><span class="line">                <value>2</value></span><br><span class="line">        </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>复制模板文件</p>
+<p><code>cp mapred-site.xml.template mapred-site.xml</code></p>
+<p>编辑mapred-site.xml</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">vi mapred-site.xml</span><br><span class="line"><configuration></configuration></span><br><span class="line">        <property></property></span><br><span class="line">                <name>mapred.job.tracker</name></span><br><span class="line">                <value>master:9001</value></span><br><span class="line">        </span><br><span class="line">        <property></property></span><br><span class="line">                <name>mapreduce.framework.name</name></span><br><span class="line">                <value>yarn</value></span><br><span class="line">         </span><br><span class="line">        <property></property></span><br><span class="line">                <name>mapreduce.jobhistory.address</name></span><br><span class="line">                <value>master:10020</value></span><br><span class="line">        </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>编辑yarn-site.xml</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">vi yarn-site.xml</span><br><span class="line"></span><br><span class="line"><property></property></span><br><span class="line">	<name>yarn.resourcemanager.hostname</name></span><br><span class="line">	<value>master</value></span><br><span class="line"></span><br><span class="line"><property></property></span><br><span class="line">         <name>yarn.nodemanager.aux-services</name></span><br><span class="line">         <value>mapreduce_shuffle</value></span><br><span class="line"></span><br><span class="line"><property></property></span><br><span class="line">         <name>yarn.log-aggregation-enable</name></span><br><span class="line">         <value>true</value></span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<p>编辑slaves，指定谁是小弟</p>
+<p><code>vi slaves</code></p>
+<p>删除原来的localhost加入<br>slave0<br>slave1</p>
+<p>默认没有masters文件，创建masters文件</p>
+<p><code>touch masters</code></p>
+<p>编辑masters文件，文件中加入指定老大的节点</p>
+<p><code>vi masters</code></p>
+<p>加入：<br><code>master</code></p>
+<p>传输配置文件给slave0,slave1</p>
+<p>Master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/hadoop-2.6.4/etc/hadoop</span><br><span class="line">scp -r ./* root@slave1:/opt/hadoop-2.6.4/etc/hadoop/</span><br><span class="line">scp -r ./* root@slave0:/opt/hadoop-2.6.4/etc/hadoop/</span><br></pre></td></tr></tbody></table></figure>
+
+<p>格式化分布式文件</p>
+<p><code>hdfs namenode -format</code></p>
+<p>启动集群：</p>
+<p><code>/opt/hadoop-2.6.4/sbin/start-dfs.sh</code></p>
+<p>检测是否启动成功分布式文件系统：</p>
+<p>Master：</p>
+<p><code>jps</code></p>
+<p>发现有NameNode、还有SecondaryNameNode说明Master中名称节点启动成功</p>
+<p>slave0，slave1：<br><code>jps</code><br>发现有DataNode说明slave机器数据节点启动成功</p>
+<p>windows浏览器中检测 192.168.31.128:50070 中的DataNodes中有slave0，slave1两个子节点说明OK</p>
+<p>启动yarn</p>
+<p><code>/opt/hadoop-2.6.4/sbin/start-yarn.sh</code></p>
+<p>检测：</p>
+<p>Master：<br><code>jps</code><br>发现有resourceManager说明master OK</p>
+<p>slave0，slave1：<br><code>jps</code><br>发现有NodeManager说明slave机器启动OK</p>
+<h5 id="失败常用解决方案：："><a href="#失败常用解决方案：：" class="headerlink" title="失败常用解决方案：："></a><font color="#D2691E" size="5">失败常用解决方案：：</font></h5><h5 id="1-暴力点方案"><a href="#1-暴力点方案" class="headerlink" title="1.暴力点方案"></a>1.暴力点方案</h5><p>Master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/opt/hadoop-2.6.4/sbin/stop-yarn.sh</span><br><span class="line">/opt/hadoop-2.6.4/sbin/stop-dfs.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<p>Master，slave0,slave1:<br><code>jps</code><br>（如果出了jps进程还有其他进程，<br>用【kill -9 进程号】 强制杀死多余的进程）</p>
+<p><code>rm -rf /opt/dfs/*</code></p>
+<p>Master:</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">hdfs namenode -format</span><br><span class="line">/opt/hadoop-2.6.4/sbin/start-dfs.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<p>master,slave0,slave1:<br><code>jps</code><br>发现在Master中有NameNode,SecondaryNameNode，在slave0，slave1发现有DataNode，说明启动成功，缺少任何一个说明失败。</p>
+<p>Master:</p>
+<p><code>/opt/hadoop-2.6.4/sbin/start-yarn.sh</code></p>
+<p>master,slave0,slave1:<br><code>jps</code><br>发现在Master中有resourceManager，在slave0，slave1发现有<br>NodeManager，说明启动成功，缺少任何一个说明失败。</p>
+<h5 id="分布式存储—-分布式计算-MapReduce"><a href="#分布式存储—-分布式计算-MapReduce" class="headerlink" title="分布式存储—-分布式计算 MapReduce"></a><font color="#D2691E" size="5">分布式存储—-分布式计算 MapReduce</font></h5><h6 id="1-CentOS7安装Mysql："><a href="#1-CentOS7安装Mysql：" class="headerlink" title="1.CentOS7安装Mysql："></a>1.CentOS7安装Mysql：</h6><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/</span><br><span class="line">sudo yum install wget</span><br><span class="line">wget http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">rpm -ivh mysql-community-release-el7-5.noarch.rpm</span><br><span class="line">sudo yum install mysql-community-server</span><br></pre></td></tr></tbody></table></figure>
+
+<p>上述命令会安装以下包：</p>
+<ul>
+<li>apparmor</li>
+<li>mysql-client-5.7</li>
+<li>mysql-common</li>
+<li>mysql-server</li>
+<li>mysql-server-5.7</li>
+<li>mysql-server-core-5.7</li>
+</ul>
+<p>启动和关闭mysql服务器：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">service mysql start</span><br><span class="line">service mysql stop</span><br></pre></td></tr></tbody></table></figure>
+
+<p>确认是否启动成功，mysql节点处于LISTEN状态表示启动成功：</p>
+<p><code>sudo netstat -tap | grep mysql</code></p>
+<p>出现LISTEN说明启动成功</p>
+<p>进入mysql shell界面：<br><code>mysql -u root -p</code></p>
+<h5 id="2-Mysql常用命令："><a href="#2-Mysql常用命令：" class="headerlink" title="2.Mysql常用命令："></a>2.Mysql常用命令：</h5><p>解决利用sqoop导入MySQL中文乱码的问题（可以插入中文，但不能用sqoop导入中文）</p>
+<p>导致导入时中文乱码的原因是character_set_server默认设置是latin1</p>
+<table>
+<thead>
+<tr>
+<th>说明</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>显示编码格式</td>
+<td>show variables like “char%”;</td>
+</tr>
+<tr>
+<td>修改编码格式</td>
+<td>set character_set_server=utf8;</td>
+</tr>
+<tr>
+<td>显示数据库</td>
+<td>show databases;</td>
+</tr>
+<tr>
+<td>使用数据库</td>
+<td>user mysql;</td>
+</tr>
+<tr>
+<td>显示数据库</td>
+<td>show tables;</td>
+</tr>
+<tr>
+<td>显示数据表结构</td>
+<td>describe user;</td>
+</tr>
+<tr>
+<td>显示表中的记录</td>
+<td>select * from 表名</td>
+</tr>
+<tr>
+<td>创建数据库</td>
+<td>create database aaa;</td>
+</tr>
+<tr>
+<td>使用数据库</td>
+<td>use aaa;</td>
+</tr>
+<tr>
+<td>创建表</td>
+<td>personcreate table person(id int(3) auto_increment not null primary key,xm varchar(10),xb varchar(2),csny date);</td>
+</tr>
+<tr>
+<td>插入一条数据</td>
+<td>insert into person values(null,’zhangsan’,’m’,’2018-8-24’);</td>
+</tr>
+<tr>
+<td>查询出person表中所有的数据</td>
+<td>select * from person;</td>
+</tr>
+<tr>
+<td>修改xm=lisi的csny字段</td>
+<td>update person set csny=’2018-08-22’ where xm=’lisi’;</td>
+</tr>
+<tr>
+<td>删除张三那条数据</td>
+<td>delete from person where xm=’zhangsan’;</td>
+</tr>
+<tr>
+<td>删除表</td>
+<td>show tables;drop table person;</td>
+</tr>
+<tr>
+<td>删除数据库</td>
+<td>show databases;drop database aaa;</td>
+</tr>
+<tr>
+<td>显示mysql数据库版本</td>
+<td>show variables like ‘version’;select version();</td>
+</tr>
+</tbody></table>
+<h5 id="3-安装Hive"><a href="#3-安装Hive" class="headerlink" title="3.安装Hive"></a>3.安装Hive</h5><h6 id="3-1"><a href="#3-1" class="headerlink" title="3.1"></a>3.1</h6><p>首先上传apache-hive-1.2.1-bin.tar.gz到master的/opt/目录下</p>
+<p>master：<br><code>cd /opt/</code></p>
+<p>解压到指定/opt文件夹下<br><code>sudo tar -zxvf apache-hive-1.2.1-bin.tar.gz</code></p>
+<p>重命名apache-hive-1.2.1-bin为hive<br><code>sudo mv apache-hive-1.2.1-bin hive</code></p>
+<h6 id="3-2-配置环境变量"><a href="#3-2-配置环境变量" class="headerlink" title="3.2:配置环境变量"></a>3.2:配置环境变量</h6><p><code>vi ~/.bashrc</code></p>
+<p>在文件末尾加入：</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">export HIVE_HOME=/opt/hive</span><br><span class="line">export PATH=$PATH:$HIVE_HOME/bin</span><br></pre></td></tr></tbody></table></figure>
+
+<p>生效配置文件<br><code>source ~/.bashrc</code></p>
+<h6 id="3-3"><a href="#3-3" class="headerlink" title="3.3"></a>3.3</h6><p>修改/opt/hive/conf下的hive-site.xml,将hive原来自带的derby改成mysql</p>
+<p><code>cd /opt/hive/conf</code></p>
+<p>重命名<br><code>mv hive-default.xml.template hive-default.xml</code></p>
+<p>编辑hive-site.xml<br><code>vi hive-site.xml</code></p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><!--?xml version="1.0" encoding="UTF-8" standalone="no"?--></span><br><span class="line"><!--?xml-stylesheet type="text/xsl" href="configuration.xsl"?--></span><br><span class="line"><configuration></configuration></span><br><span class="line">  <property></property></span><br><span class="line">    <name>javax.jdo.option.ConnectionURL</name></span><br><span class="line">    <value>jdbc:mysql://localhost:3306/hive?createDatabaseIfNotExist=true</value></span><br><span class="line">    <description>JDBC connect string for a JDBC metastore</description></span><br><span class="line">  </span><br><span class="line">  <property></property></span><br><span class="line">    <name>javax.jdo.option.ConnectionDriverName</name></span><br><span class="line">    <value>com.mysql.jdbc.Driver</value></span><br><span class="line">    <description>Driver class name for a JDBC metastore</description></span><br><span class="line">  </span><br><span class="line">  <property></property></span><br><span class="line">    <name>javax.jdo.option.ConnectionUserName</name></span><br><span class="line">    <value>hive</value></span><br><span class="line">    <description>username to use against metastore database</description></span><br><span class="line">  </span><br><span class="line">  <property></property></span><br><span class="line">    <name>javax.jdo.option.ConnectionPassword</name></span><br><span class="line">    <value>hive</value></span><br><span class="line">    <description>password to use against metastore database</description></span><br><span class="line">  </span><br><span class="line"></span><br></pre></td></tr></tbody></table></figure>
+
+<h6 id="3-4：启动mysql数据库，新建hive数据库"><a href="#3-4：启动mysql数据库，新建hive数据库" class="headerlink" title="3.4：启动mysql数据库，新建hive数据库"></a>3.4：启动mysql数据库，新建hive数据库</h6><p><code>mysql -u root -p</code><br><code>show databases;</code></p>
+<p>新建一个Hive数据库，这个Hive数据库与hive-site.xml文件中//localhost:3306/hive的hive对应，用来保存hive元数据信息</p>
+<p><code>create database hive;</code></p>
+<h6 id="3-5-配置mysql允许hive接入"><a href="#3-5-配置mysql允许hive接入" class="headerlink" title="3.5:配置mysql允许hive接入"></a>3.5:配置mysql允许hive接入</h6><p>将所有数据库的所有表的所有权限都赋给hive用户，后面的hive适配hive-site.xml中配置的连接密码</p>
+<p><code>grant all on *.* to hive@localhost identified by 'hive';</code></p>
+<p>刷新mysql系统权限关系表</p>
+<p><code>flush privileges;</code></p>
+<h6 id="3-6：启动Hive"><a href="#3-6：启动Hive" class="headerlink" title="3.6：启动Hive"></a>3.6：启动Hive</h6><p>在启动Hive之前，先启动hadoop集群，但是咱们现在装的是伪分布式的hive配置，所以先将集群改成伪分布式：</p>
+<p>停掉之前的分布式集群</p>
+<p>master:</p>
+<p><code>cd /opt/hadoop-2.6.4/sbin/</code></p>
+<p><code>./stop-all.sh</code>(封装了stop-yarn.sh和stop-dfs.sh)</p>
+<p><code>jps</code> (保证只剩下一个jps进程)</p>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd /opt/dfs/</span><br><span class="line">rm -rf *</span><br><span class="line">hdfs namenode -format</span><br><span class="line">cd /opt/hadoop-2.6.4/sbin/</span><br><span class="line">./start-dfs.sh</span><br></pre></td></tr></tbody></table></figure>
+
+<p><code>jps</code>（查看出来NameNode，DataNode， SecondaryNameNode）</p>
+<p><code>cd /opt/hive/bin</code></p>
+<p>启动Hive</p>
+<p><code>./hive</code></p>
+<h5 id="hive常用HiveQL操作"><a href="#hive常用HiveQL操作" class="headerlink" title="hive常用HiveQL操作"></a><font color="#D2691E" size="5">hive常用HiveQL操作</font></h5><table>
+<thead>
+<tr>
+<th>说明</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>创建数据库</td>
+<td>create database if not exists hive;</td>
+</tr>
+<tr>
+<td>显示hive中包含的数据库</td>
+<td>show databases;</td>
+</tr>
+<tr>
+<td>显示hive中以h开头的数据库</td>
+<td>show databases like ‘h.*’;</td>
+</tr>
+<tr>
+<td>使用hive数据库</td>
+<td>use hive;</td>
+</tr>
+<tr>
+<td>删除不包含表的数据库</td>
+<td>drop database if exists hive;</td>
+</tr>
+<tr>
+<td>删除数据库和它包含的表</td>
+<td>drop database if exists hive cascade;</td>
+</tr>
+</tbody></table>
+
       
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
       
     </div>
     <div class="article-info article-info-index">
@@ -467,16 +534,84 @@ var _hmt = _hmt || [];
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day4/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/01/大数据学习-Day4/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2019/08/01/大数据学习-Day5/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          大数据学习 Day5
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/08/01/大数据学习-Day3/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">大数据学习 Day3</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -496,283 +631,14 @@ var _hmt = _hmt || [];
 
 
 
-
   
-    <article id="post-大数据学习-Day3" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/08/01/大数据学习-Day3/">大数据学习 Day3</a>
-    </h1>
   
 
-        
-        <a href="/2019/08/01/大数据学习-Day3/" class="archive-article-date">
-  	<time datetime="2019-08-01T03:14:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-01</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1-检查ip："><a href="#1-检查ip：" class="headerlink" title="1.检查ip："></a><font color="#D2691E" size="5">1.检查ip：</font></h5><p>1.每天关机之后，再次开机后，首先检查ip地址有没有发生改变（因用的动态IP）</p>
-<p>master，slave0，slave1：<br><code>ifconfig</code></p>
-<p>如果ip变了，修改对应三台机器的hosts文件中的IP映射</p>
-        
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day3/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/08/01/大数据学习-Day3/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Untitled" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/12/Untitled/">大数据学习 Day2</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/12/Untitled/" class="archive-article-date">
-  	<time datetime="2019-07-12T06:22:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h5 id="1-修改主机名："><a href="#1-修改主机名：" class="headerlink" title="1.修改主机名："></a><font color="#D2691E" size="5">1.修改主机名：</font></h5><p><code>sudo vi /etc/sysconfig/network</code></p>
-<p>o:在当前行的下一行进入编辑模式</p>
-<p>加入一句话：<br><code>HOSTNAME=master</code></p>
-        
-          <a class="article-more-a" href="/2019/07/12/Untitled/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/12/Untitled/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客文章" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/08/我的第一篇博客文章/">大数据学习 Day1</a>
-    </h1>
   
 
-        
-        <a href="/2019/07/08/我的第一篇博客文章/" class="archive-article-date">
-  	<time datetime="2019-07-08T12:54:29.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><font color="#D2691E" size="6">准备</font></h2><hr>
-<p>安装VMware，并安装Centos,有无界面都可，无界面效率高</p>
-        
-          <a class="article-more-a" href="/2019/07/08/我的第一篇博客文章/#more">more >></a>
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/08/我的第一篇博客文章/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/07/08/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/07/08/hello-world/" class="archive-article-date">
-  	<time datetime="2019-07-08T12:49:47.425Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-08</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/07/08/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -795,8 +661,8 @@ var _hmt = _hmt || [];
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
