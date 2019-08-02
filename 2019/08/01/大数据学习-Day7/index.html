@@ -3,24 +3,24 @@
   
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <link rel="dns-prefetch" href="http://yoursite.com">
+  <link rel="dns-prefetch" href="https://wesukilayezcy.github.io">
   <title>大数据学习 Day7 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="eclipse上编写mapreduce程序，进行词频统计开启分布式文件系统（这里为伪分布），将/opt/input/test.txt文件上传到分布式文件系统中的/input下hdfs dfs –put /opt/input/test.txt /input/  保证安装好jdk_1.8.0_32bit">
 <meta name="keywords" content="iOS，Python,程序猿，编程，代码">
 <meta property="og:type" content="article">
 <meta property="og:title" content="大数据学习 Day7">
-<meta property="og:url" content="http://yoursite.com/2019/08/01/大数据学习-Day7/index.html">
+<meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/01/大数据学习-Day7/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
 <meta property="og:description" content="eclipse上编写mapreduce程序，进行词频统计开启分布式文件系统（这里为伪分布），将/opt/input/test.txt文件上传到分布式文件系统中的/input下hdfs dfs –put /opt/input/test.txt /input/  保证安装好jdk_1.8.0_32bit">
 <meta property="og:locale" content="default">
-<meta property="og:image" content="http://yoursite.com/img/BCABEB1F-4FC4-466C-A088-487352B55BE7.png">
-<meta property="og:image" content="http://yoursite.com/img/B9018D45-9340-4B72-80D5-36506EBF5815.png">
+<meta property="og:image" content="https://wesukilayezcy.github.io/img/BCABEB1F-4FC4-466C-A088-487352B55BE7.png">
+<meta property="og:image" content="https://wesukilayezcy.github.io/img/B9018D45-9340-4B72-80D5-36506EBF5815.png">
 <meta property="og:updated_time" content="2019-08-01T05:26:12.402Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="大数据学习 Day7">
 <meta name="twitter:description" content="eclipse上编写mapreduce程序，进行词频统计开启分布式文件系统（这里为伪分布），将/opt/input/test.txt文件上传到分布式文件系统中的/input下hdfs dfs –put /opt/input/test.txt /input/  保证安装好jdk_1.8.0_32bit">
-<meta name="twitter:image" content="http://yoursite.com/img/BCABEB1F-4FC4-466C-A088-487352B55BE7.png">
+<meta name="twitter:image" content="https://wesukilayezcy.github.io/img/BCABEB1F-4FC4-466C-A088-487352B55BE7.png">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -104,6 +104,7 @@ var _hmt = _hmt || [];
 					<a class="mail" target="_blank" href="https:/www.519820332@qq.com" title="mail"><i class="icon-mail"></i></a>
 		        
 			</div>
+<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="260" height="86" src="https://music.163.com/outchain/player?type=2&id=30070142&auto=1&height=66"></iframe>
 		</nav>
 	</header>		
 </div>
@@ -214,7 +215,7 @@ var _hmt = _hmt || [];
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line">package com.sj.mapreduce;</span><br><span class="line"></span><br><span class="line">import org.apache.hadoop.conf.Configuration;</span><br><span class="line">import org.apache.hadoop.fs.Path;</span><br><span class="line">import org.apache.hadoop.io.IntWritable;</span><br><span class="line">import org.apache.hadoop.io.Text;</span><br><span class="line">import org.apache.hadoop.mapreduce.Job;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;</span><br><span class="line">import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;</span><br><span class="line"></span><br><span class="line">public class WordCountDriver {</span><br><span class="line">    //用Exception 抛异常，用Exception去接受所有异常，多态的体现</span><br><span class="line">    public static void main(String[] args) throws Exception {</span><br><span class="line">        System.setProperty("hadoop.home.dir", "D:\\hadoop-common-2.2.0-bin-master\\hadoop-common-2.2.0-bin-master");</span><br><span class="line"></span><br><span class="line">        //集群中所配置的hadoop的配置文件</span><br><span class="line">        Configuration configuration = new Configuration();</span><br><span class="line">        //创建job</span><br><span class="line">        Job job=Job.getInstance(configuration);</span><br><span class="line">        //指定本程序的jar包所在路径</span><br><span class="line">        job.setJarByClass(WordCountDriver.class);</span><br><span class="line">        //指定本job要使用的Mapper业务类</span><br><span class="line">        job.setMapperClass(WordCountMapper.class);</span><br><span class="line">        //指定mapper输出的k-v类型</span><br><span class="line">        job.setMapOutputKeyClass(Text.class);</span><br><span class="line">        job.setMapOutputValueClass(IntWritable.class);</span><br><span class="line">        //制定本job要使用的Reduce业务类</span><br><span class="line">        job.setReducerClass(WordCountReducer.class);</span><br><span class="line">        //设置Reduce输出的最终k-v数据类型</span><br><span class="line">        job.setOutputKeyClass(Text.class);</span><br><span class="line">        job.setOutputValueClass(IntWritable.class);</span><br><span class="line"></span><br><span class="line">        FileInputFormat.setInputPaths(job, new Path("hdfs://192.168.245.132:9000/input/test.txt"));</span><br><span class="line">        FileOutputFormat.setOutputPath(job,new Path("hdfs://192.168.245.132:9000/output"));</span><br><span class="line">        Boolean res=job.waitForCompletion(true);</span><br><span class="line">        System.exit(res?0:-1);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    }</span><br><span class="line"></span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
 <p>运行WordCountDriver.java<br>对分布式系统中/input/test.txt中的测试文件进行词频统计，得到结果</p>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260,"hOffset":80,"vOffset":-50},"mobile":{"show":false},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260,"hOffset":80,"vOffset":-50},"mobile":{"show":false},"log":false,"tagMode":false});</script>
       
        <-- 
 		
@@ -227,7 +228,7 @@ var _hmt = _hmt || [];
 				
 				<br>
 				<strong>本文链接：</strong>
-				http://yoursite.com/2019/08/01/大数据学习-Day7/
+				https://wesukilayezcy.github.io/2019/08/01/大数据学习-Day7/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -318,7 +319,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/08/01/大数据学习-Day7/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wesukilayezcy.github.io/2019/08/01/大数据学习-Day7/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -373,25 +374,8 @@ var _hmt = _hmt || [];
   
 
   
-
   
-
   
-  <div id="gitment-ctn"></div> 
-<link rel="stylesheet" href="https://wesukilayezcy.github.io/gitment/style/default.css">
-<script src="https://wesukilayezcy.github.io/js/gitment.js"></script>
-<script>
-var gitment = new Gitment({
-  id: "http://yoursite.com/2019/08/01/大数据学习-Day7/",
-  owner: 'Wesukilayezcy',
-  repo: 'wesukilayezcy.github.io',
-  oauth: {
-    client_id: '9245b250556dc0aac731',
-    client_secret: 'b044d4ad286ec406b080ae37e76b238d2f4208c1',
-  },
-})
-gitment.render('gitment-ctn')
-</script>
 
   
 
@@ -632,5 +616,5 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
 
 </div>
   </div>
-
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":130,"height":260,"hOffset":80,"vOffset":-50},"mobile":{"show":false},"log":false,"tagMode":false});</script>
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
