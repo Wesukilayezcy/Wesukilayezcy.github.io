@@ -6,18 +6,18 @@
   <link rel="dns-prefetch" href="https://wesukilayezcy.github.io">
   <title>Swift String | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="字符串的子串12345678910111213141516171819// MARK:字符串的子串    func demo4() {        //建议：一般使用NSString作为中转，因为swift取字串方法一直在优化        let str = "我们一起去飞"        let ocStr = str as NSString        let s1 = ocStr.su">
+  <meta name="description" content="字符串的子串">
 <meta name="keywords" content="Swift,String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift String">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/05/Swift-String/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
-<meta property="og:description" content="字符串的子串12345678910111213141516171819// MARK:字符串的子串    func demo4() {        //建议：一般使用NSString作为中转，因为swift取字串方法一直在优化        let str = "我们一起去飞"        let ocStr = str as NSString        let s1 = ocStr.su">
+<meta property="og:description" content="字符串的子串">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T01:53:43.648Z">
+<meta property="og:updated_time" content="2019-08-05T01:56:44.474Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift String">
-<meta name="twitter:description" content="字符串的子串12345678910111213141516171819// MARK:字符串的子串    func demo4() {        //建议：一般使用NSString作为中转，因为swift取字串方法一直在优化        let str = "我们一起去飞"        let ocStr = str as NSString        let s1 = ocStr.su">
+<meta name="twitter:description" content="字符串的子串">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -210,7 +210,8 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="字符串的子串"><a href="#字符串的子串" class="headerlink" title="字符串的子串"></a><font color="#D2691E" size="3">字符串的子串</font></h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// MARK:字符串的子串</span><br><span class="line">    func demo4() {</span><br><span class="line">        //建议：一般使用NSString作为中转，因为swift取字串方法一直在优化</span><br><span class="line">        let str = "我们一起去飞"</span><br><span class="line">        let ocStr = str as NSString</span><br><span class="line">        let s1 = ocStr.substring(with: NSMakeRange(2, 3))</span><br><span class="line">        print(s1)</span><br><span class="line">        </span><br><span class="line">        print(str.startIndex)</span><br><span class="line">        print(str.endIndex)</span><br><span class="line"> </span><br><span class="line">        </span><br><span class="line">        guard let range=str.range(of: "一起") else {</span><br><span class="line">            print("没有找到字符串")</span><br><span class="line">            return</span><br><span class="line">        }</span><br><span class="line">        print(range)</span><br><span class="line">        </span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
+        <h5 id="字符串的子串"><a href="#字符串的子串" class="headerlink" title="字符串的子串"></a><font color="#D2691E" size="3">字符串的子串</font></h5><a id="more"></a>
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">// MARK:字符串的子串</span><br><span class="line">    func demo4() {</span><br><span class="line">        //建议：一般使用NSString作为中转，因为swift取字串方法一直在优化</span><br><span class="line">        let str = "我们一起去飞"</span><br><span class="line">        let ocStr = str as NSString</span><br><span class="line">        let s1 = ocStr.substring(with: NSMakeRange(2, 3))</span><br><span class="line">        print(s1)</span><br><span class="line">        </span><br><span class="line">        print(str.startIndex)</span><br><span class="line">        print(str.endIndex)</span><br><span class="line"> </span><br><span class="line">        </span><br><span class="line">        guard let range=str.range(of: "一起") else {</span><br><span class="line">            print("没有找到字符串")</span><br><span class="line">            return</span><br><span class="line">        }</span><br><span class="line">        print(range)</span><br><span class="line">        </span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure>
 
 <h5 id="格式化"><a href="#格式化" class="headerlink" title="格式化"></a><font color="#D2691E" size="3">格式化</font></h5> <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">// MARK:格式化</span><br><span class="line">func demo3() {</span><br><span class="line">    let h = 8</span><br><span class="line">    let m = 9</span><br><span class="line">    let s = 6</span><br><span class="line">    </span><br><span class="line">    let dateStr = "\(h):\(m):\(s)"</span><br><span class="line">    print(dateStr)</span><br><span class="line">    //使用格式字符串格式化</span><br><span class="line">    let dateStr1 = String(format: "%02d:%02d:%02d", h,m,s)</span><br><span class="line">    print(dateStr1)</span><br><span class="line">    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure>
 
@@ -504,15 +505,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">for循环</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">switch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -528,15 +533,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">switch</a>
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">for循环</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">String</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>

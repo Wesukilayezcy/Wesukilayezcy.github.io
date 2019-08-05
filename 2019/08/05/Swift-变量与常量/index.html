@@ -6,18 +6,18 @@
   <link rel="dns-prefetch" href="https://wesukilayezcy.github.io">
   <title>Swift 变量与常量 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758class ViewController: UIViewController {        override func viewDidLoad() {        super.vi">
+  <meta name="description" content="变量与常量">
 <meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift 变量与常量">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/05/Swift-变量与常量/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
-<meta property="og:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758class ViewController: UIViewController {        override func viewDidLoad() {        super.vi">
+<meta property="og:description" content="变量与常量">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T01:37:04.799Z">
+<meta property="og:updated_time" content="2019-08-05T02:05:00.267Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 变量与常量">
-<meta name="twitter:description" content="12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455565758class ViewController: UIViewController {        override func viewDidLoad() {        super.vi">
+<meta name="twitter:description" content="变量与常量">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -193,7 +193,7 @@ var _hmt = _hmt || [];
   <div class="article-inner">
     
       <header class="article-header">
-      <div align="center" class="post-count">字数：358字 | 预计阅读时长：1分钟</div>
+      <div align="center" class="post-count">字数：363字 | 预计阅读时长：1分钟</div>
         
   
     <h1 class="article-title" itemprop="name">
@@ -210,7 +210,9 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">class ViewController: UIViewController {</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() {</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line">        demo2()</span><br><span class="line">    }</span><br><span class="line">    //关于var和let的选择</span><br><span class="line">    //不可变的更安全，开发的时候，通常都先使用let，在需要变化的时候，再改成var</span><br><span class="line">    func demo3() {</span><br><span class="line">        let v = UIView()</span><br><span class="line">        //仅仅修改v的属性，并没有修改v的指针地址</span><br><span class="line">        v.backgroundColor = UIColor.red</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    //1.定义变量 var,可以修改</span><br><span class="line">    //  常量let 定义之后，不能修改</span><br><span class="line">    //2.自动推导，变量/常量的类型会根据右侧的代码执行结果，推导对应的类型</span><br><span class="line">    //热键option+click</span><br><span class="line">    //3.在Swift中对类型要求异常严格</span><br><span class="line">    //  任何不同类型的数据之间，不允许直接运算</span><br><span class="line">    //  不会做任何默认的隐式转换，所有的类型确定，都要有程序员负责</span><br><span class="line">    //4.Swift中，不存在基本数据类型，都是结构体</span><br><span class="line">    func demo1() {</span><br><span class="line">        let x = 10</span><br><span class="line">        let y = 10.5</span><br><span class="line">        // print(x + y)</span><br><span class="line">        //1.将y转换成整数</span><br><span class="line">        //OC中的写法（int）y =>类型强转</span><br><span class="line">        //Swift中Int()结构体的构造函数</span><br><span class="line">        print(x + Int(y))</span><br><span class="line">        </span><br><span class="line">        //2.将x转换成Double</span><br><span class="line">        print(Double(x)+y)</span><br><span class="line">    }</span><br><span class="line">    func demo2() {</span><br><span class="line">        //如果需要指定变量/常量的类型，也可直接使用let x:类型 = 值</span><br><span class="line">        //提示：在Swift开发中，极少使用直接指定类型，通常都是自动推导</span><br><span class="line">        let x :Double = 10</span><br><span class="line">        let y = 10.5</span><br><span class="line">        print(x + y)</span><br><span class="line">    }</span><br><span class="line">    func demo(){</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        //整数： Int(OC中的NSInteger类似)</span><br><span class="line">        var x = 10</span><br><span class="line">        x = 20</span><br><span class="line">        //小数：Double高（OC中的CGFloat）</span><br><span class="line">        let y = 5.5</span><br><span class="line">        </span><br><span class="line">        let v = UIView()</span><br><span class="line">        </span><br><span class="line">        print(x)</span><br><span class="line">        print(y)</span><br><span class="line">        print(v)</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+        <h5 id="变量与常量"><a href="#变量与常量" class="headerlink" title="变量与常量"></a>变量与常量</h5><a id="more"></a>
+
+<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line">class ViewController: UIViewController {</span><br><span class="line">    </span><br><span class="line">    override func viewDidLoad() {</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line">        demo2()</span><br><span class="line">    }</span><br><span class="line">    //关于var和let的选择</span><br><span class="line">    //不可变的更安全，开发的时候，通常都先使用let，在需要变化的时候，再改成var</span><br><span class="line">    func demo3() {</span><br><span class="line">        let v = UIView()</span><br><span class="line">        //仅仅修改v的属性，并没有修改v的指针地址</span><br><span class="line">        v.backgroundColor = UIColor.red</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    //1.定义变量 var,可以修改</span><br><span class="line">    //  常量let 定义之后，不能修改</span><br><span class="line">    //2.自动推导，变量/常量的类型会根据右侧的代码执行结果，推导对应的类型</span><br><span class="line">    //热键option+click</span><br><span class="line">    //3.在Swift中对类型要求异常严格</span><br><span class="line">    //  任何不同类型的数据之间，不允许直接运算</span><br><span class="line">    //  不会做任何默认的隐式转换，所有的类型确定，都要有程序员负责</span><br><span class="line">    //4.Swift中，不存在基本数据类型，都是结构体</span><br><span class="line">    func demo1() {</span><br><span class="line">        let x = 10</span><br><span class="line">        let y = 10.5</span><br><span class="line">        // print(x + y)</span><br><span class="line">        //1.将y转换成整数</span><br><span class="line">        //OC中的写法（int）y =>类型强转</span><br><span class="line">        //Swift中Int()结构体的构造函数</span><br><span class="line">        print(x + Int(y))</span><br><span class="line">        </span><br><span class="line">        //2.将x转换成Double</span><br><span class="line">        print(Double(x)+y)</span><br><span class="line">    }</span><br><span class="line">    func demo2() {</span><br><span class="line">        //如果需要指定变量/常量的类型，也可直接使用let x:类型 = 值</span><br><span class="line">        //提示：在Swift开发中，极少使用直接指定类型，通常都是自动推导</span><br><span class="line">        let x :Double = 10</span><br><span class="line">        let y = 10.5</span><br><span class="line">        print(x + y)</span><br><span class="line">    }</span><br><span class="line">    func demo(){</span><br><span class="line">        </span><br><span class="line">        </span><br><span class="line">        //整数： Int(OC中的NSInteger类似)</span><br><span class="line">        var x = 10</span><br><span class="line">        x = 20</span><br><span class="line">        //小数：Double高（OC中的CGFloat）</span><br><span class="line">        let y = 5.5</span><br><span class="line">        </span><br><span class="line">        let v = UIView()</span><br><span class="line">        </span><br><span class="line">        print(x)</span><br><span class="line">        print(y)</span><br><span class="line">        print(v)</span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
       
        <-- 
 		
@@ -501,15 +503,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
-              </li>
-             
-              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">for循环</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">switch</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -525,15 +531,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">switch</a>
+                <a href="javascript:void(0)" class="js-tag color4">大数据</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">for循环</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color2">String</a>
+                <a href="javascript:void(0)" class="js-tag color5">hexo</a>
               </li>
             
             <div class="clearfix"></div>
