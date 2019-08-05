@@ -4,20 +4,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wesukilayezcy.github.io">
-  <title>大数据学习 Day2 | Wesukilayezcy的博客</title>
+  <title>Swift 逻辑分支 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
-<meta name="keywords" content="大数据">
+  <meta name="description" content="12345678910111213141516171819202122232425// MARK:-三目   func demo1() {       let x = 3       //三目的语法和OC一样       x &gt; 5 ? print("大了"):print("小了")       //分享 有印象就行       //'()'表示空执行       x &gt; 5 ? print("大">
+<meta name="keywords" content="Swift,三目">
 <meta property="og:type" content="article">
-<meta property="og:title" content="大数据学习 Day2">
-<meta property="og:url" content="https://wesukilayezcy.github.io/2019/07/12/Untitled/index.html">
+<meta property="og:title" content="Swift 逻辑分支">
+<meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/05/Swift-逻辑分支/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
-<meta property="og:description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
+<meta property="og:description" content="12345678910111213141516171819202122232425// MARK:-三目   func demo1() {       let x = 3       //三目的语法和OC一样       x &gt; 5 ? print("大了"):print("小了")       //分享 有印象就行       //'()'表示空执行       x &gt; 5 ? print("大">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-02T02:47:05.424Z">
+<meta property="og:updated_time" content="2019-08-05T01:44:01.146Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="大数据学习 Day2">
-<meta name="twitter:description" content="1.修改主机名：sudo vi /etc/sysconfig/network o:在当前行的下一行进入编辑模式 加入一句话：HOSTNAME=master">
+<meta name="twitter:title" content="Swift 逻辑分支">
+<meta name="twitter:description" content="12345678910111213141516171819202122232425// MARK:-三目   func demo1() {       let x = 3       //三目的语法和OC一样       x &gt; 5 ? print("大了"):print("小了")       //分享 有印象就行       //'()'表示空执行       x &gt; 5 ? print("大">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -189,312 +189,28 @@ var _hmt = _hmt || [];
             <canvas data-colors="#eaeaea" data-sectionheight="100" data-contentid="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-Untitled" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Swift-逻辑分支" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
-      <div align="center" class="post-count">字数：1.1k字 | 预计阅读时长：4分钟</div>
+      <div align="center" class="post-count">字数：94字 | 预计阅读时长：1分钟</div>
         
   
     <h1 class="article-title" itemprop="name">
-      大数据学习 Day2
+      Swift 逻辑分支
     </h1>
   
 
         
-        <a href="/2019/07/12/Untitled/" class="archive-article-date">
-  	<time datetime="2019-07-12T06:22:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-07-12</time>
+        <a href="/2019/08/05/Swift-逻辑分支/" class="archive-article-date">
+  	<time datetime="2019-08-05T01:41:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h5 id="1-修改主机名："><a href="#1-修改主机名：" class="headerlink" title="1.修改主机名："></a><font color="#D2691E" size="5">1.修改主机名：</font></h5><p><code>sudo vi /etc/sysconfig/network</code></p>
-<p>o:在当前行的下一行进入编辑模式</p>
-<p>加入一句话：<br><code>HOSTNAME=master</code></p>
-<a id="more"></a>
-<h5 id="2-修改域名解析文件"><a href="#2-修改域名解析文件" class="headerlink" title="2.修改域名解析文件"></a><font color="#D2691E" size="5">2.修改域名解析文件</font></h5><p><code>sudo vi /etc/hostname</code></p>
-<p>删除默认那句话，然后加入：<br>master</p>
-<p>reboot：重启机器</p>
-<h5 id="3-关闭防火墙"><a href="#3-关闭防火墙" class="headerlink" title="3.关闭防火墙"></a><font color="#D2691E" size="5">3.关闭防火墙</font></h5><p>查看防火墙状态<br><code>sudo firewall-cmd --state</code></p>
-<p>临时关闭防火墙<br><code>sudo systemctl stop firewalld.service</code></p>
-<p>禁止开机自启动防火墙<br><code>systemctl disable firewalld.service</code></p>
-<h5 id="4-克隆master两份分别命名为slave0-slave1"><a href="#4-克隆master两份分别命名为slave0-slave1" class="headerlink" title="4:克隆master两份分别命名为slave0,slave1"></a><font color="#D2691E" size="5">4:克隆master两份分别命名为slave0,slave1</font></h5><h5 id="5-修改slave0各种名称为slave0，以及slave1名称。"><a href="#5-修改slave0各种名称为slave0，以及slave1名称。" class="headerlink" title="5.修改slave0各种名称为slave0，以及slave1名称。"></a><font color="#D2691E" size="5">5.修改slave0各种名称为slave0，以及slave1名称。</font></h5><p>slave0:</p>
-<p><code>sudo vi /etc/sysconfig/network</code></p>
-<p>o:字母o进入编辑模式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HOSTNAME=slave0</span><br><span class="line"></span><br><span class="line">esc</span><br><span class="line"></span><br><span class="line">:wq!</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>sudo vi /etc/hostname</code></p>
-<p>i:进入编辑模式<br>删除里面文件内容master改成</p>
-<p>slave0</p>
-<p><code>reboot</code></p>
-<p>slave1:</p>
-<p><code>sudo vi /etc/sysconfig/network</code></p>
-<p>o:字母o进入编辑模式</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">HOSTNAME=slave1</span><br><span class="line"></span><br><span class="line">esc</span><br><span class="line"></span><br><span class="line">:wq!</span><br></pre></td></tr></tbody></table></figure>
-
-<p><code>sudo vi /etc/hostname</code></p>
-<p>i:进入编辑模式,删除里面文件内容master改成slave1</p>
-<p><code>reboot</code></p>
-<p><font color="red" size="5">注意：</font></p>
-<p>1.三台机器防火墙都处于永久关闭状态</p>
-<p>2.三台机器名称都对应了</p>
-<p>3.保证三台机器能相互ping通</p>
-<h5 id="6：安装远程连接工具并修改hosts文件"><a href="#6：安装远程连接工具并修改hosts文件" class="headerlink" title="6：安装远程连接工具并修改hosts文件"></a><font color="#D2691E" size="5">6：安装远程连接工具并修改hosts文件</font></h5><p>master:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">sudo vi /etc/hosts</span><br><span class="line"></span><br><span class="line">192.168.44.166	master</span><br><span class="line"></span><br><span class="line">192.168.44.167	slave0</span><br><span class="line"></span><br><span class="line">192.168.44.168	slave1</span><br></pre></td></tr></tbody></table></figure>
-
-<p>测试master能不能ping通slave0跟slave1</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">master:</span><br><span class="line"></span><br><span class="line">ping 192.168.44.167</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping slave0</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping 192.168.44.168</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br><span class="line"></span><br><span class="line">ping slave1</span><br><span class="line"></span><br><span class="line">ctrl+c</span><br></pre></td></tr></tbody></table></figure>
-
-<p>将master下面的配置好的hosts文件传输给另外两台机器slave0跟slave1</p>
-<p>master:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo scp /etc/hosts root@slave0:/etc/hosts</span><br><span class="line"></span><br><span class="line">sudo scp /etc/hosts root@slave1:/etc/hosts</span><br></pre></td></tr></tbody></table></figure>
-
-<p>查看slave0跟slave1中的hosts文件</p>
-<p>slave0:</p>
-<p><code>cat /etc/hosts</code></p>
-<p>slave1:</p>
-<p><code>cat /etc/hosts</code></p>
-<p>测试三台机器能不能用master，slave0，slave1代替IP地址相互ping通</p>
-<h5 id="7：配置无密登录"><a href="#7：配置无密登录" class="headerlink" title="7：配置无密登录"></a><font color="#D2691E" size="5">7：配置无密登录</font></h5><p>Mster,slave0,slave1:</p>
-<p><code>ssh-keygen</code></p>
-<p>master到slave0的无密登录：</p>
-<p>master:</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">ls</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@slave0:~/.ssh/master.pub</span><br></pre></td></tr></tbody></table></figure>
-
-<p>slave0：</p>
-<p><code>cd ~/.ssh</code></p>
-<p><code>ls</code></p>
-<p>创建文件</p>
-<p><code>touch authorized_keys</code></p>
-<p>修改文件权限</p>
-<p><code>chmod 600 authoried_keys</code></p>
-<p>复制master.pub文件内容然后追加到authorized_keys这个文件末尾</p>
-<p><code>cat master.pub >> authorized_keys</code></p>
-<p>master:</p>
-<p>测试master远程登录slave0,发现不需要再输入密码则可以直接登录slave0</p>
-<p><code>ssh root@slave0</code></p>
-<p><code>exit</code></p>
-<p>master到slave1无密码登录：</p>
-<p>master：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@slave1:~/.ssh/master.pub</span><br></pre></td></tr></tbody></table></figure>
-
-<p>slave1:</p>
-<p><code>cd ~/.ssh</code></p>
-<p><code>ls</code></p>
-<p>创建文件</p>
-<p><code>touch authorized_keys</code></p>
-<p>修改文件权限</p>
-<p><code>chmod 600 authoried_keys</code></p>
-<p>复制master.pub文件内容然后追加到authorized_keys这个文件末尾</p>
-<p><code>cat master.pub >> authorized_keys</code></p>
-<p>测试master远程登录slave1,发现不需要再输入密码则可以直接登录slave1</p>
-<p>master:</p>
-<p><code>ssh root@slave1</code></p>
-<p><code>exit</code></p>
-<p>slave1到master无密码登录：</p>
-<p>slave1：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@master:~/.ssh/slave1.pub</span><br></pre></td></tr></tbody></table></figure>
-
-<p>master:</p>
-<p><code>cd ~/.ssh</code></p>
-<p><code>ls</code></p>
-<p>创建文件</p>
-<p><code>touch authorized_keys</code></p>
-<p>修改文件权限</p>
-<p><code>chmod 600 authoried_keys</code></p>
-<p>复制slave1.pub文件内容然后追加到authorized_keys这个文件末尾</p>
-<p><code>cat slave1.pub >> authorized_keys</code></p>
-<p>测试slave1远程登录master,发现不需要再输入密码则可以直接登录master</p>
-<p>slave1:</p>
-<p><code>ssh root@master</code></p>
-<p><code>exit</code></p>
-<p>slave0到master无密码登录：</p>
-<p>slave0：</p>
-<figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd ~/.ssh</span><br><span class="line"></span><br><span class="line">scp id_rsa.pub root@master:~/.ssh/slave0.pub</span><br></pre></td></tr></tbody></table></figure>
-
-<p>master:</p>
-<p><code>cd ~/.ssh</code></p>
-<p><code>ls</code></p>
-<p>(以下两部之前已经做过就不用做了：</p>
-<p>创建文件</p>
-<p><code>touch authorized_keys</code></p>
-<p>修改文件权限</p>
-<p><code>chmod 600 authoried_keys</code></p>
-<p>)</p>
-<p>复制slave0.pub文件内容然后追加到authorized_keys这个文件末尾</p>
-<p><code>cat slave0.pub >> authorized_keys</code></p>
-<p>测试slave0远程登录master,发现不需要再输入密码则可以直接登录master</p>
-<p>slave0:</p>
-<p><code>ssh root@master</code></p>
-<p><code>exit</code></p>
-<p>master到master无密码登录：</p>
-<p>master：</p>
-<p><code>cd ~/.ssh</code></p>
-<p><code>ls</code></p>
-<p>(以下两部之前已经做过就不用做了：<br>创建文件</p>
-<p><code>touch authorized_keys</code></p>
-<p>修改文件权限</p>
-<p><code>chmod 600 authoried_keys</code><br>)</p>
-<p>复制id_rsa.pub文件内容然后追加到authorized_keys这个文件末尾</p>
-<p><code>cat id_rsa.pub >> authorized_keys</code></p>
-<p>测试master远程登录master,发现不需要再输入密码则可以直接登录master</p>
-<p>master:</p>
-<p><code>ssh root@master</code></p>
-<p><code>exit</code></p>
-<p><font color="#D2691E" size="5">拓展:</font></p>
-<p>文件权限：<br>- rwx —  —</p>
-<p>第一个字母：<br>-  普通文件</p>
-<p>l  类似快捷方式</p>
-<p>d  文件夹</p>
-<p>第二、三、四个字母：当前用户对该文件的权限</p>
-<p>r:是否可读</p>
-<p>w:是否可写</p>
-<p>x:是否可执行</p>
-<p>第五、六、七个字母：当前用户组对该文件的权限</p>
-<p>r:是否可读</p>
-<p>w:是否可写</p>
-<p>x:是否可执行</p>
-<p>第八、九、十个字母：其他用户对该文件的权限</p>
-<p>r:是否可读</p>
-<p>w:是否可写</p>
-<p>x:是否可执行</p>
-<p>chmod 600 </p>
-<p>0    000</p>
-<p>1    001</p>
-<p>2    010</p>
-<p>3    011</p>
-<p>4    100</p>
-<p>5    101</p>
-<p>6    110</p>
-<p>7    111</p>
-<table>
-<thead>
-<tr>
-<th>-</th>
-<th>-</th>
-<th>x</th>
-<th>-</th>
-<th>-</th>
-<th>-</th>
-<th>-</th>
-<th>-</th>
-<th>-</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>0</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>r</td>
-<td>w</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>6</td>
-<td></td>
-<td></td>
-<td>0</td>
-<td></td>
-<td></td>
-<td>0</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>7</td>
-<td></td>
-<td></td>
-<td>7</td>
-<td></td>
-<td></td>
-<td>7</td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-<td>1</td>
-</tr>
-<tr>
-<td>r</td>
-<td>w</td>
-<td>x</td>
-<td>r</td>
-<td>w</td>
-<td>x</td>
-<td>r</td>
-<td>w</td>
-<td>x</td>
-</tr>
-<tr>
-<td>-</td>
-<td>w</td>
-<td>-</td>
-<td>r</td>
-<td>-</td>
-<td>x</td>
-<td>r</td>
-<td>-</td>
-<td>-</td>
-</tr>
-<tr>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>0</td>
-<td>1</td>
-<td>1</td>
-<td>0</td>
-<td>0</td>
-</tr>
-<tr>
-<td>2</td>
-<td></td>
-<td></td>
-<td>5</td>
-<td></td>
-<td></td>
-<td>4</td>
-<td></td>
-<td></td>
-</tr>
-</tbody></table>
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+        <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">// MARK:-三目</span><br><span class="line">   func demo1() {</span><br><span class="line">       let x = 3</span><br><span class="line">       //三目的语法和OC一样</span><br><span class="line">       x > 5 ? print("大了"):print("小了")</span><br><span class="line">       //分享 有印象就行</span><br><span class="line">       //'()'表示空执行</span><br><span class="line">       x > 5 ? print("大了"):()</span><br><span class="line">   }</span><br><span class="line">   func demo(){</span><br><span class="line">       let x = 10</span><br><span class="line">       </span><br><span class="line">       /**</span><br><span class="line">        1.条件不需要（）</span><br><span class="line">        2.语句必须有{}</span><br><span class="line">        */</span><br><span class="line">       if x > 5 {</span><br><span class="line">           print("大了")</span><br><span class="line">       }else{</span><br><span class="line">           //Will never be executed</span><br><span class="line">           //永远不会执行 -编译器编译的时候会做语法检查</span><br><span class="line">           print("小了")</span><br><span class="line">       }</span><br><span class="line">       </span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
       
        <-- 
 		
@@ -507,7 +223,7 @@ var _hmt = _hmt || [];
 				
 				<br>
 				<strong>本文链接：</strong>
-				https://wesukilayezcy.github.io/2019/07/12/Untitled/
+				https://wesukilayezcy.github.io/2019/08/05/Swift-逻辑分支/
 				<br>
 				<strong>版权声明：</strong>
 				本作品采用
@@ -558,7 +274,11 @@ var _hmt = _hmt || [];
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">大数据</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Swift</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">三目</a>
         		</li>
       		
 		</ul>
@@ -614,7 +334,7 @@ var _hmt = _hmt || [];
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://wesukilayezcy.github.io/2019/07/12/Untitled/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://wesukilayezcy.github.io/2019/08/05/Swift-逻辑分支/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -628,18 +348,18 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
-    <a href="/2019/08/01/大数据学习-Day3/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/08/05/Swift-switch/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          大数据学习 Day3
+          Swift switch
         
       </div>
     </a>
   
   
-    <a href="/2019/07/08/我的第一篇博客文章/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">大数据学习 Day1</div>
+    <a href="/2019/08/05/Swift-可选项/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Swift 可选项</div>
       <i class="icon-circle-right"></i>
     </a>
   
@@ -681,7 +401,7 @@ var _hmt = _hmt || [];
             repo: 'Wesukilayezcy.github.io',
             owner: 'Wesukilayezcy',
             admin: ['Wesukilayezcy'],
-            id: 'Fri Jul 12 2019 14:22:00 GMT+0800',
+            id: 'Mon Aug 05 2019 09:41:00 GMT+0800',
             distractionFreeMode: false  // Facebook-like distraction free mode
         })
  

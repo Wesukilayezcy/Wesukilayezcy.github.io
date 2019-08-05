@@ -4,17 +4,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://wesukilayezcy.github.io">
-  <title>11111 | Wesukilayezcy的博客</title>
+  <title>Swift OC与Swift大致区别 | Wesukilayezcy的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="keywords" content="iOS，Python,程序猿，编程，代码">
+  <meta name="description" content="1.OC  [[UIView alloc]initWithXXX:xxx]  Swift UIView(XXX: )  UIView() ：类名（）与 alloc / init 等价2.OC [UIColor redColor]  Swift  UIColor.red && Color Literal3. 访问当前对象的属性，可以不使用self.建议：都不用,在编译器提示的时候，再添加，会对语境有">
+<meta name="keywords" content="Swift">
 <meta property="og:type" content="article">
-<meta property="og:title" content="11111">
+<meta property="og:title" content="Swift OC与Swift大致区别">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/05/11111/index.html">
 <meta property="og:site_name" content="Wesukilayezcy的博客">
+<meta property="og:description" content="1.OC  [[UIView alloc]initWithXXX:xxx]  Swift UIView(XXX: )  UIView() ：类名（）与 alloc / init 等价2.OC [UIColor redColor]  Swift  UIColor.red && Color Literal3. 访问当前对象的属性，可以不使用self.建议：都不用,在编译器提示的时候，再添加，会对语境有">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-08-05T01:00:36.410Z">
+<meta property="og:updated_time" content="2019-08-05T01:37:13.392Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="11111">
+<meta name="twitter:title" content="Swift OC与Swift大致区别">
+<meta name="twitter:description" content="1.OC  [[UIView alloc]initWithXXX:xxx]  Swift UIView(XXX: )  UIView() ：类名（）与 alloc / init 等价2.OC [UIColor redColor]  Swift  UIColor.red && Color Literal3. 访问当前对象的属性，可以不使用self.建议：都不用,在编译器提示的时候，再添加，会对语境有">
   
     <link rel="alternative" href="/atom.xml" title="Wesukilayezcy的博客" type="application/atom+xml">
   
@@ -190,24 +193,37 @@ var _hmt = _hmt || [];
   <div class="article-inner">
     
       <header class="article-header">
-      <div align="center" class="post-count">字数：0字 | 预计阅读时长：1分钟</div>
+      <div align="center" class="post-count">字数：214字 | 预计阅读时长：1分钟</div>
         
   
     <h1 class="article-title" itemprop="name">
-      11111
+      Swift OC与Swift大致区别
     </h1>
   
 
         
         <a href="/2019/08/05/11111/" class="archive-article-date">
-  	<time datetime="2019-08-05T01:00:36.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
+  	<time datetime="2019-08-05T01:00:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-08-05</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+        <h5 id="1"><a href="#1" class="headerlink" title="1."></a>1.</h5><pre><code>OC  [[UIView alloc]initWithXXX:xxx]
+
+Swift UIView(XXX: )
+
+UIView() ：类名（）与 alloc / init 等价</code></pre><h5 id="2"><a href="#2" class="headerlink" title="2."></a>2.</h5><pre><code>OC [UIColor redColor]
+
+Swift  UIColor.red && Color Literal</code></pre><h5 id="3-访问当前对象的属性，可以不使用self"><a href="#3-访问当前对象的属性，可以不使用self" class="headerlink" title="3. 访问当前对象的属性，可以不使用self."></a>3. 访问当前对象的属性，可以不使用self.</h5><h5 id="建议："><a href="#建议：" class="headerlink" title="建议："></a><font color="#D2691E" size="3">建议：</font></h5><pre><code>都不用,在编译器提示的时候，再添加，会对语境有更好的体会</code></pre><h5 id="原因"><a href="#原因" class="headerlink" title=" 原因:"></a><font color="#D2691E" size="3"> 原因:</font></h5><pre><code>闭包（类似于OC block）,需要使用self.</code></pre><h5 id="4-没有’-’"><a href="#4-没有’-’" class="headerlink" title="4. 没有’;’"></a>4. 没有’;’</h5><pre><code>Swift默认不需要</code></pre><h5 id="5-枚举类型"><a href="#5-枚举类型" class="headerlink" title="5. 枚举类型"></a>5. 枚举类型</h5><pre><code>OC UIButtonTypeContactAdd
+Swift '.'contactAdd</code></pre><h5 id="6-监听方法"><a href="#6-监听方法" class="headerlink" title="6. 监听方法"></a>6. 监听方法</h5><pre><code>OC @selector
+Swift #selector 如果有参数，不需要：</code></pre><h5 id="7-调试"><a href="#7-调试" class="headerlink" title="7. 调试"></a>7. 调试</h5><pre><code>OC NSLog
+Swift print
+    -没有时间
+    -效率比NSLog高
+OC  __FUNCTION__
+Swift #function</code></pre><h5 id="代码："><a href="#代码：" class="headerlink" title="代码："></a><font color="#D2691E" size="3">代码：</font></h5> <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"> class ViewController: UIViewController {</span><br><span class="line"></span><br><span class="line">    override func viewDidLoad() {</span><br><span class="line">        super.viewDidLoad()</span><br><span class="line"></span><br><span class="line">        //1.创建一个视图</span><br><span class="line">        let v = UIView(frame: CGRect(x: 100, y: 100, width: 100, height: 100))</span><br><span class="line">        //2.设置背景颜色</span><br><span class="line">        v.backgroundColor = UIColor.red</span><br><span class="line">        //3.添加</span><br><span class="line">        view .addSubview(v)</span><br><span class="line">        </span><br><span class="line">        //创建一个按钮</span><br><span class="line">        let btn = UIButton(type: .contactAdd)</span><br><span class="line">        </span><br><span class="line">        v.addSubview(btn)</span><br><span class="line">        </span><br><span class="line">        btn.addTarget(self, action: #selector(clickMe), for: .touchUpInside)</span><br><span class="line">    }</span><br><span class="line">    @objc func clickMe(btn:UIButton) -> (){</span><br><span class="line">        print(#function)</span><br><span class="line">        print(btn)</span><br><span class="line">    }</span><br><span class="line">  </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
       
        <-- 
 		
@@ -266,6 +282,17 @@ var _hmt = _hmt || [];
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Swift</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -330,6 +357,15 @@ var _hmt = _hmt || [];
   
 <nav id="article-nav">
   
+    <a href="/2019/08/05/Swift-变量与常量/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Swift 变量与常量
+        
+      </div>
+    </a>
+  
   
     <a href="/2019/08/01/大数据学习-Day8/" id="article-nav-older" class="article-nav-link-wrap">
       <div class="article-nav-title">大数据学习 Day8</div>
@@ -374,7 +410,7 @@ var _hmt = _hmt || [];
             repo: 'Wesukilayezcy.github.io',
             owner: 'Wesukilayezcy',
             admin: ['Wesukilayezcy'],
-            id: 'Mon Aug 05 2019 09:00:36 GMT+0800',
+            id: 'Mon Aug 05 2019 09:00:00 GMT+0800',
             distractionFreeMode: false  // Facebook-like distraction free mode
         })
  
@@ -483,6 +519,34 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">hexo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">Swift</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">if let</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">guard let</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">三目</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">switch</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">for循环</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
               </li>
             
             <div class="clearfix"></div>
