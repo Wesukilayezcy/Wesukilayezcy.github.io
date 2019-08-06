@@ -1,12 +1,12 @@
-<!DOCTYPE html><html class="theme-next muse use-motion" lang><head>
+<!DOCTYPE html><html class="theme-next pisces use-motion" lang="zh-CN"><head>
   <meta charset="UTF-8">
 <meta name="generator" content="Hexo 3.9.0">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.3.0">
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/4a24667d7c51fdb.jpg?v=7.3.0">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-20190711022605870.ico?v=7.3.0">
   <link rel="mask-icon" href="/images/logo.svg?v=7.3.0" color="#222">
 
 <link rel="stylesheet" href="/css/main.css?v=7.3.0">
@@ -19,7 +19,7 @@
   var NexT = window.NexT || {};
   var CONFIG = {
     root: '/',
-    scheme: 'Muse',
+    scheme: 'Pisces',
     version: '7.3.0',
     sidebar: {"position":"left","display":"post","offset":12,"onmobile":false},
     back2top: {"enable":true,"sidebar":false,"scrollpercent":false},
@@ -36,14 +36,14 @@
       hits: {"per_page":10},
       labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     },
-    localsearch: {"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
-    path: '',
+    localsearch: {"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},
+    path: 'search.xml',
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
     translation: {
-      copy_button: 'Copy',
-      copy_success: 'Copied',
-      copy_failure: 'Copy failed'
+      copy_button: '复制',
+      copy_success: '复制成功',
+      copy_failure: '复制失败'
     }
   };
 </script>
@@ -53,13 +53,14 @@
 <meta property="og:type" content="article">
 <meta property="og:title" content="Swift 可选项">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/05/Swift-可选项/index.html">
-<meta property="og:site_name" content="Wesukilayezcy的博客">
+<meta property="og:site_name" content="Wesukilaye">
 <meta property="og:description" content="可选项的定义与简单使用">
-<meta property="og:locale" content="default">
+<meta property="og:locale" content="zh-CN">
 <meta property="og:updated_time" content="2019-08-05T01:57:33.211Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 可选项">
 <meta name="twitter:description" content="可选项的定义与简单使用">
+  <link rel="alternate" href="/atom.xml" title="Wesukilaye" type="application/atom+xml">
   <link rel="canonical" href="https://wesukilayezcy.github.io/2019/08/05/Swift-可选项/">
 
 
@@ -74,7 +75,7 @@
   };
 </script>
 
-  <title>Swift 可选项 | Wesukilayezcy的博客</title>
+  <title>Swift 可选项 | Wesukilaye</title>
   
 
 
@@ -111,7 +112,8 @@
 
 </head>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   <div class="container sidebar-position-left">
     <div class="headband"></div>
@@ -123,7 +125,7 @@
     <div class="custom-logo-site-title">
       <a href="/" class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">Wesukilayezcy的博客</span>
+        <span class="site-title">Wesukilaye</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -132,7 +134,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Toggle navigation bar">
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -152,18 +154,7 @@
       
     
 
-    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Home</a>
-
-  </li>
-      
-      
-      
-        
-        <li class="menu-item menu-item-about">
-      
-    
-
-    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>About</a>
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
 
   </li>
       
@@ -174,7 +165,18 @@
       
     
 
-    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>Tags</a>
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+      
+      
+      
+        
+        <li class="menu-item menu-item-categories">
+      
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
 
   </li>
       
@@ -185,24 +187,36 @@
       
     
 
-    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archives</a>
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
 
   </li>
-      
-      
-      
+      <li class="menu-item menu-item-search">
+        <a href="javascript:;" class="popup-trigger">
         
-        <li class="menu-item menu-item-schedule">
-      
+          <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+      </li>
     
-
-    <a href="/schedule/" rel="section"><i class="menu-item-icon fa fa-fw fa-calendar"></i> <br>Schedule</a>
-
-  </li>
   </ul>
 
-    
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
 
+
+    </div>
 </nav>
 </div>
     </header>
@@ -213,6 +227,8 @@
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+            
+
           <div id="content" class="content page-post-detail">
             
 
@@ -228,12 +244,12 @@
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Mr.Zhao">
-      <meta itemprop="description" content="熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发">
-      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="description" content="熟练使用iOS Objective-c，Swift. 熟悉Python爬取网络数据,深入研究移动端开发">
+      <meta itemprop="image" content="/images/-3f287701f7540772.jpg">
     </span>
 
     <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Wesukilayezcy的博客">
+      <meta itemprop="name" content="Wesukilaye">
     </span>
       <header class="post-header">
 
@@ -249,13 +265,13 @@
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
               </span>
-              <span class="post-meta-item-text">Posted on</span>
+              <span class="post-meta-item-text">发表于</span>
 
               
                 
               
 
-              <time title="Created: 2019-08-05 09:32:00 / Modified: 09:57:33" itemprop="dateCreated datePublished" datetime="2019-08-05T09:32:00+08:00">2019-08-05</time>
+              <time title="创建时间：2019-08-05 09:32:00 / 修改时间：09:57:33" itemprop="dateCreated datePublished" datetime="2019-08-05T09:32:00+08:00">2019-08-05</time>
             </span>
           
             
@@ -263,6 +279,27 @@
             
           
 
+          
+          <br>
+            <span class="post-meta-item" title="本文字数">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-file-word-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">本文字数：</span>
+              
+              <span>2.9k</span>
+            </span>
+          
+            <span class="post-meta-item" title="阅读时长">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-clock-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">阅读时长 ≈</span>
+              
+              <span>3 分钟</span>
+            </span>
           
 
         </div>
@@ -277,7 +314,7 @@
         <h5 id="可选项的定义与简单使用"><a href="#可选项的定义与简单使用" class="headerlink" title="可选项的定义与简单使用"></a><font color="#D2691E" size="5">可选项的定义与简单使用</font></h5><a id="more"></a>
 <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line">/**</span><br><span class="line">    定义 可选项使用？</span><br><span class="line">    解包使用！，准备计算</span><br><span class="line">    */</span><br><span class="line">   func demo1()  {</span><br><span class="line">       //定义y，没有初始化</span><br><span class="line">       let y:Int?</span><br><span class="line">       //给常量设置数值，初始化的工作能做一次</span><br><span class="line">       y = 20</span><br><span class="line">       //再次修改常量会报错</span><br><span class="line">       //y = 30</span><br><span class="line">       print(y)</span><br><span class="line">       // *** var 的可选值为nil</span><br><span class="line">       // *** let 的可选值没有默认值</span><br><span class="line">       var x:Int?</span><br><span class="line">       x=10</span><br><span class="line">       x=100</span><br><span class="line">       print(x)</span><br><span class="line">       </span><br><span class="line">       </span><br><span class="line">   }</span><br><span class="line">   func demo(){</span><br><span class="line">       //1.原始的可选项定义</span><br><span class="line">       //none:没有值，或者some某一类值</span><br><span class="line">       let x:Optional = 10</span><br><span class="line">       print(x)</span><br><span class="line">       //2.简单定义</span><br><span class="line">       //'?'用来定义y是一个可选的Int类型，可能没有值，也有可能是个整数</span><br><span class="line">       let  y:Int? = 20</span><br><span class="line">       print(y)</span><br><span class="line">       //不同类型之间的值不能直接运算！如果没有值，是nil。nil不是任何数据类型,不能参与计算</span><br><span class="line">       //print(x+y)</span><br><span class="line">       // '!'强行解包 -从可选值中强行获取对应的非空值</span><br><span class="line">       //程序员必须为每一个！负责</span><br><span class="line">       //程序中要少用！</span><br><span class="line">       print(x!+y!)</span><br><span class="line">       </span><br><span class="line">   }</span><br></pre></td></tr></tbody></table></figure>
 
-<h5 id="可选项的判断"><a href="#可选项的判断" class="headerlink" title="可选项的判断"></a><font color="#D2691E" size="5">可选项的判断</font></h5> <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">  func demo4(name:String?,age:Int?)  {</span><br><span class="line">        if let name = name,let age = age {</span><br><span class="line">            //非空的name age仅在{}有效</span><br><span class="line">             print(name + String(age))</span><br><span class="line">        }</span><br><span class="line">        //guard let和if let的技巧</span><br><span class="line">        //使用同名的变量接受值，在后续使用的都是非空值，不需要解包</span><br><span class="line">        //可以避免起名字的烦恼</span><br><span class="line">        guard let name = name,let age = age else {</span><br><span class="line">            print("姓名或年龄为nil")</span><br><span class="line">            return  }</span><br><span class="line">        print(name + String(age))</span><br><span class="line">    }</span><br><span class="line">    // MARK:-guard 守卫/守护</span><br><span class="line">    //guard let和iflet 刚好相反</span><br><span class="line">    func demo3() {</span><br><span class="line">        let oName:String? = "老王"</span><br><span class="line">        let oAge:Int? = 10</span><br><span class="line">        //guard let守护一定有值，如果没有直接返回</span><br><span class="line">        guard let name = oName,let age = oAge else {</span><br><span class="line">            print("姓名或年龄为nil")</span><br><span class="line">            return  }</span><br><span class="line">        //代码运行至此，一定有值</span><br><span class="line">        //通常判断是否有值后，会做具体的逻辑实现 通常代码多</span><br><span class="line">        //如果使用if let 凭空多了一层分支，guard是降低分支层次的方法</span><br><span class="line">        print(name + String(age))</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    // MARK: -if let /var 连用语法，目的就是判断值</span><br><span class="line">    func demo2() {</span><br><span class="line">        let oName:String? = "老王"</span><br><span class="line">        let oAge:Int? = 30</span><br><span class="line">        if oName != nil && oAge != nil{</span><br><span class="line">            print(oName! + String(oAge!))</span><br><span class="line">        }</span><br><span class="line">        //if let 连用，判断对象的值是否为nil,{}内一定有值，不需要解包</span><br><span class="line">        //if var 连用， {}可以対值进行修改</span><br><span class="line">        if var name = oName,</span><br><span class="line">            let age = oAge {</span><br><span class="line">            name = "老李"</span><br><span class="line">            //进入分支后,name和age有值，不需要解包</span><br><span class="line">            //name age作用域仅在{}</span><br><span class="line">            print(name + String(age))</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    // MARK: -??</span><br><span class="line">    func demo1(x:Int?,y:Int?)  {</span><br><span class="line">        /**</span><br><span class="line">         ??是一个简单的三目</span><br><span class="line">         -如果有值，使用值</span><br><span class="line">         -如果没有值，使用？？后的值替代</span><br><span class="line">         */</span><br><span class="line">        print((x ?? 0)+(y ?? 0))</span><br><span class="line">        </span><br><span class="line">        let name:String?  = "老王"</span><br><span class="line">        print((name ?? "")+"你好")</span><br><span class="line">        // ?? 操作符的优先级低，在使用的时候，最好用（）包一下</span><br><span class="line">        print(name ?? ""+"你好")</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    func demo(x:Int?,y:Int?){</span><br><span class="line">       //1.强行解包有风险</span><br><span class="line">//        print(x! + y!)</span><br><span class="line">        </span><br><span class="line">        //2.使用if判断</span><br><span class="line">        //但是</span><br><span class="line">        if x != nil && y != nil {</span><br><span class="line">            print(x!+y!)</span><br><span class="line">        }else{</span><br><span class="line">            print("x或者y为nil")</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+<h5 id="可选项的判断"><a href="#可选项的判断" class="headerlink" title="可选项的判断"></a><font color="#D2691E" size="5">可选项的判断</font></h5> <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br></pre></td><td class="code"><pre><span class="line">  func demo4(name:String?,age:Int?)  {</span><br><span class="line">        if let name = name,let age = age {</span><br><span class="line">            //非空的name age仅在{}有效</span><br><span class="line">             print(name + String(age))</span><br><span class="line">        }</span><br><span class="line">        //guard let和if let的技巧</span><br><span class="line">        //使用同名的变量接受值，在后续使用的都是非空值，不需要解包</span><br><span class="line">        //可以避免起名字的烦恼</span><br><span class="line">        guard let name = name,let age = age else {</span><br><span class="line">            print("姓名或年龄为nil")</span><br><span class="line">            return  }</span><br><span class="line">        print(name + String(age))</span><br><span class="line">    }</span><br><span class="line">    // MARK:-guard 守卫/守护</span><br><span class="line">    //guard let和iflet 刚好相反</span><br><span class="line">    func demo3() {</span><br><span class="line">        let oName:String? = "老王"</span><br><span class="line">        let oAge:Int? = 10</span><br><span class="line">        //guard let守护一定有值，如果没有直接返回</span><br><span class="line">        guard let name = oName,let age = oAge else {</span><br><span class="line">            print("姓名或年龄为nil")</span><br><span class="line">            return  }</span><br><span class="line">        //代码运行至此，一定有值</span><br><span class="line">        //通常判断是否有值后，会做具体的逻辑实现 通常代码多</span><br><span class="line">        //如果使用if let 凭空多了一层分支，guard是降低分支层次的方法</span><br><span class="line">        print(name + String(age))</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    </span><br><span class="line">    // MARK: -if let /var 连用语法，目的就是判断值</span><br><span class="line">    func demo2() {</span><br><span class="line">        let oName:String? = "老王"</span><br><span class="line">        let oAge:Int? = 30</span><br><span class="line">        if oName != nil && oAge != nil{</span><br><span class="line">            print(oName! + String(oAge!))</span><br><span class="line">        }</span><br><span class="line">        //if let 连用，判断对象的值是否为nil,{}内一定有值，不需要解包</span><br><span class="line">        //if var 连用， {}可以対值进行修改</span><br><span class="line">        if var name = oName,</span><br><span class="line">            let age = oAge {</span><br><span class="line">            name = "老李"</span><br><span class="line">            //进入分支后,name和age有值，不需要解包</span><br><span class="line">            //name age作用域仅在{}</span><br><span class="line">            print(name + String(age))</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    // MARK: -??</span><br><span class="line">    func demo1(x:Int?,y:Int?)  {</span><br><span class="line">        /**</span><br><span class="line">         ??是一个简单的三目</span><br><span class="line">         -如果有值，使用值</span><br><span class="line">         -如果没有值，使用？？后的值替代</span><br><span class="line">         */</span><br><span class="line">        print((x ?? 0)+(y ?? 0))</span><br><span class="line">        </span><br><span class="line">        let name:String?  = "老王"</span><br><span class="line">        print((name ?? "")+"你好")</span><br><span class="line">        // ?? 操作符的优先级低，在使用的时候，最好用（）包一下</span><br><span class="line">        print(name ?? ""+"你好")</span><br><span class="line">        </span><br><span class="line">    }</span><br><span class="line">    func demo(x:Int?,y:Int?){</span><br><span class="line">       //1.强行解包有风险</span><br><span class="line">//        print(x! + y!)</span><br><span class="line">        </span><br><span class="line">        //2.使用if判断</span><br><span class="line">        //但是</span><br><span class="line">        if x != nil && y != nil {</span><br><span class="line">            print(x!+y!)</span><br><span class="line">        }else{</span><br><span class="line">            print("x或者y为nil")</span><br><span class="line">        }</span><br><span class="line">        </span><br><span class="line">    }</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
     </div>
 
     
@@ -288,11 +325,11 @@
           
         
         <div class="post-tags">
-            <a href="/tags/Swift/" rel="tag"># Swift</a>
+            <a href="/tags/Swift/" rel="tag">~ Swift</a>
           
-            <a href="/tags/if-let/" rel="tag"># if let</a>
+            <a href="/tags/if-let/" rel="tag">~ if let</a>
           
-            <a href="/tags/guard-let/" rel="tag"># guard let</a>
+            <a href="/tags/guard-let/" rel="tag">~ guard let</a>
           
         </div>
         <div class="post-nav">
@@ -317,12 +354,24 @@
   
   
   
+<div>
+  
+    <div>
+    
+        <div style="text-align:center;color: #ccc;font-size:14px;">-------------本文结束<i class="fa fa-paw"></i>感谢您的阅读-------------</div>
+    
+</div>
+
+  
+</div>
   </article>
 
   </div>
 
 
-          </div>
+       
+</div>
+
           
 
 
@@ -341,10 +390,10 @@
     <div class="sidebar-inner">
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
-            Table of Contents
+            文章目录
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview-wrap">
-            Overview
+            站点概览
           </li>
         </ul>
       
@@ -353,8 +402,9 @@
         <div class="site-overview">
 
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" src="/images/-3f287701f7540772.jpg" alt="Mr.Zhao">
   <p class="site-author-name" itemprop="name">Mr.Zhao</p>
-  <div class="site-description motion-element" itemprop="description">熟练使用iOS Objective-c，熟悉Python爬取网络数据,深入研究移动端开发</div>
+  <div class="site-description motion-element" itemprop="description">熟练使用iOS Objective-c，Swift. 熟悉Python爬取网络数据,深入研究移动端开发</div>
 </div>
   <nav class="site-state motion-element">
       <div class="site-state-item site-state-posts">
@@ -362,13 +412,17 @@
           <a href="/archives/">
         
           <span class="site-state-item-count">18</span>
-          <span class="site-state-item-name">posts</span>
+          <span class="site-state-item-name">日志</span>
         </a>
       </div>
     
       
       
       <div class="site-state-item site-state-tags">
+        
+          
+            <a href="/tags/">
+          
         
         
         
@@ -395,11 +449,51 @@
           
         
         <span class="site-state-item-count">11</span>
-        <span class="site-state-item-name">tags</span>
-        
+        <span class="site-state-item-name">标签</span>
+        </a>
       </div>
     
   </nav>
+  <div class="feed-link motion-element">
+    <a href="/atom.xml" rel="alternate">
+      <i class="fa fa-rss"></i>RSS
+    </a>
+  </div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://github.com/Wesukilayezcy" title="GitHub → https://github.com/Wesukilayezcy" rel="noopener" target="_blank"><i class="fa fa-fw fa-github"></i>GitHub</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="mailto:519820332@qq.com" title="E-Mail → mailto:519820332@qq.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+      </span>
+    
+      <span class="links-of-author-item">
+      
+      
+        
+      
+      
+        
+      
+        <a href="https://space.bilibili.com/213348424" title="bilibili → https://space.bilibili.com/213348424" rel="noopener" target="_blank"><i class="fa fa-fw fa-heartbeat"></i>bilibili</a>
+      </span>
+    
+  </div>
 
 
 
@@ -438,10 +532,20 @@
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Mr.Zhao</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    <span title="站点总字数">49k</span>
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    <span title="站点阅读时长">44 分钟</span>
 </div>
-  <div class="powered-by">Powered by <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.9.0</div>
+  <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>
-  <div class="theme-info">Theme – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> v7.3.0</div>
+  <div class="theme-info">主题 – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> v7.3.0</div>
 
         
 
@@ -464,6 +568,10 @@
   </div>
 
   
+    
+    
+  
+  <script color="0,0,255" opacity="0.5" zindex="-1" count="99" src="/lib/canvas-nest/canvas-nest.min.js"></script>
   <script src="/lib/jquery/index.js?v=3.4.1"></script>
   <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
@@ -472,7 +580,8 @@
   <script src="/js/motion.js?v=7.3.0"></script>
 
 
-  <script src="/js/schemes/muse.js?v=7.3.0"></script>
+  <script src="/js/affix.js?v=7.3.0"></script>
+  <script src="/js/schemes/pisces.js?v=7.3.0"></script>
 
 
 <script src="/js/next-boot.js?v=7.3.0"></script>
@@ -497,6 +606,8 @@
 
 
 
+
+  <script src="/js/local-search.js?v=7.3.0"></script>
 
 
 
@@ -523,6 +634,12 @@
 <script src="/js/post-details.js?v=7.3.0"></script>
 
 
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":200,"height":400,"hOffset":100,"vOffset":-50},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+
+
+<script type="text/javascript" color="0,0,255" opacity="0.7" zindex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script>
+
 
 <script type="text/javascript" charset="utf-8" src="/js/lazyload-plugin/lazyload.intersectionObserver.min.js"></script></body></html>
