@@ -1618,7 +1618,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #637847;
+  background: #ffff2b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2670,5 +2670,5 @@ body {
   background-attachment: fixed;
   background-position: 50% 50%;
   background-size: 100% 100%;
-  cursor: url("/images/favicon.ico"), auto;
+  cursor: url("/images/AppStarting.ico"), auto;
 }
