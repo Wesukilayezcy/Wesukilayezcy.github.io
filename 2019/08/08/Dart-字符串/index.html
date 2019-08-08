@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = 'abc';String b = "abc";//相邻字符串创建var c = 'hello' + ' ' + 'world';var b = 'hello'' ''world';var d = 'hello'   ' '     'world';var e = 'he">
+  <meta name="description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = &apos;abc&apos;;String b = &quot;abc&quot;;//相邻字符串创建var c = &apos;hello&apos; + &apos; &apos; + &apos;world&apos;;var b = &apos;hello&a">
 <meta name="keywords" content="Dart,String">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dart 字符串">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/08/Dart-字符串/index.html">
 <meta property="og:site_name" content="Wesukilaye">
-<meta property="og:description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = 'abc';String b = "abc";//相邻字符串创建var c = 'hello' + ' ' + 'world';var b = 'hello'' ''world';var d = 'hello'   ' '     'world';var e = 'he">
+<meta property="og:description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = &apos;abc&apos;;String b = &quot;abc&quot;;//相邻字符串创建var c = &apos;hello&apos; + &apos; &apos; + &apos;world&apos;;var b = &apos;hello&a">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-08T08:03:49.996Z">
+<meta property="og:updated_time" content="2019-08-08T09:12:53.149Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dart 字符串">
-<meta name="twitter:description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = 'abc';String b = "abc";//相邻字符串创建var c = 'hello' + ' ' + 'world';var b = 'hello'' ''world';var d = 'hello'   ' '     'world';var e = 'he">
+<meta name="twitter:description" content="定义+拼接单引号或者双引号的创建与拼接12345678910111213141516171819202122String a = &apos;abc&apos;;String b = &quot;abc&quot;;//相邻字符串创建var c = &apos;hello&apos; + &apos; &apos; + &apos;world&apos;;var b = &apos;hello&a">
   <link rel="alternate" href="/atom.xml" title="Wesukilaye" type="application/atom+xml">
   <link rel="canonical" href="https://wesukilayezcy.github.io/2019/08/08/Dart-字符串/">
 
@@ -271,7 +271,7 @@
                 
               
 
-              <time title="创建时间：2019-08-08 15:44:00 / 修改时间：16:03:49" itemprop="dateCreated datePublished" datetime="2019-08-08T15:44:00+08:00">2019-08-08</time>
+              <time title="创建时间：2019-08-08 15:44:00 / 修改时间：17:12:53" itemprop="dateCreated datePublished" datetime="2019-08-08T15:44:00+08:00">2019-08-08</time>
             </span>
           
             
@@ -325,6 +325,8 @@
 
       
         <h5 id="定义-拼接"><a href="#定义-拼接" class="headerlink" title="定义+拼接"></a><font color="#D2691E" size="5">定义+拼接</font></h5><h6 id="单引号或者双引号的创建与拼接"><a href="#单引号或者双引号的创建与拼接" class="headerlink" title="单引号或者双引号的创建与拼接"></a>单引号或者双引号的创建与拼接</h6><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">String a = 'abc';</span><br><span class="line">String b = "abc";</span><br><span class="line">//相邻字符串创建</span><br><span class="line">var c = 'hello' + ' ' + 'world';</span><br><span class="line">var b = 'hello'' ''world';</span><br><span class="line">var d = 'hello'   ' '     'world';</span><br><span class="line"></span><br><span class="line">var e = 'hello'</span><br><span class="line">' '</span><br><span class="line">'world';</span><br><span class="line"></span><br><span class="line">var f = '''</span><br><span class="line">hello world</span><br><span class="line">this is multi line</span><br><span class="line">''';</span><br><span class="line"></span><br><span class="line">var g = """</span><br><span class="line">hello world</span><br><span class="line">this is multi line</span><br><span class="line">""";</span><br><span class="line"></span><br><span class="line">var h = 'hello'',world'",OK";</span><br></pre></td></tr></tbody></table></figure>
+
+<a id="more"></a>
 
 <h6 id="转义字符"><a href="#转义字符" class="headerlink" title="转义字符"></a>转义字符</h6><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var s1 = 'In a raw string, not even \n gets \t special treatment.';</span><br><span class="line">print(s1);</span><br><span class="line">//结果</span><br><span class="line">In a raw string, not even </span><br><span class="line"> gets    special treatment.</span><br></pre></td></tr></tbody></table></figure>
 
