@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wesukilayezcy.github.io/"/>
-  <updated>2019-08-08T09:12:42.249Z</updated>
+  <updated>2019-08-13T01:15:32.431Z</updated>
   <id>https://wesukilayezcy.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Dart map</title>
+    <link href="https://wesukilayezcy.github.io/2019/08/12/Dart-map-1/"/>
+    <id>https://wesukilayezcy.github.io/2019/08/12/Dart-map-1/</id>
+    <published>2019-08-12T10:00:35.000Z</published>
+    <updated>2019-08-13T01:15:32.431Z</updated>
+    
+    <content type="html"><![CDATA[<html><head></head><body><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a><font color="#D2691E" size="5">定义</font></h4><h5 id="不指定泛型"><a href="#不指定泛型" class="headerlink" title="不指定泛型"></a>不指定泛型</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值</span><br><span class="line">   //print(map1);//{aa: aaa, bb: 22, cc: true}</span><br><span class="line">   </span><br><span class="line">   Map map3 = {"a":"a1","b":"b1"};//直接赋初始值</span><br><span class="line">   //print(map3);//{a: a1, b: b1}</span><br><span class="line">   </span><br><span class="line">   var map2 = new Map();</span><br><span class="line">   map2['dd']=3.3;</span><br><span class="line">   map2[2] = 'ddd22';</span><br><span class="line">//print(map2);//{dd: 3.3, 2: ddd22}</span><br><span class="line">//print(map2[3]);//null   如果不存在，则是null</span><br><span class="line">   map2[3]= null;//key存在  value存在 value的值为null</span><br><span class="line">//print(map2.length);//3    长度</span><br></pre></td></tr></tbody></table></figure><h5 id="指定泛型"><a href="#指定泛型" class="headerlink" title="指定泛型"></a>指定泛型</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var map1 = <String,String>{};</span><br><span class="line">   Map<int,String> map2 = new Map();</span><br><span class="line">   map2[1]="a";</span><br><span class="line">   map2[2] = "b";</span><br><span class="line">//print(map2);//{1: a, 2: b}</span><br><span class="line">   Map<String,int> map3 = {"a":1,"b":2};</span><br><span class="line">//print(map3);//{a: 1, b: 2}</span><br></pre></td></tr></tbody></table></figure><h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><font color="#D2691E" size="5">属性</font></h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Map<String,int> map6 = {"a":1,"b":2};</span><br><span class="line">//print(map6.length);//2  长度</span><br><span class="line">//print(map6.isNotEmpty);//true  是否不为空</span><br><span class="line">//print(map6.isEmpty);//false   是否为空</span><br><span class="line">//print(map6.keys);//(a, b)   key的集合</span><br><span class="line">//print(map6.values);//(1, 2)  value的集合</span><br><span class="line">//print(map6.entries);//(MapEntry(a: 1), MapEntry(b: 2))   map迭代的键值对集合</span><br></pre></td></tr></tbody></table></figure><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a><font color="#D2691E" size="5">方法</font></h4><h5 id="增加"><a href="#增加" class="headerlink" title="增加"></a><font color="#D2691E" size="4">增加</font></h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"> Map<String,int> map7 = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">    //新增一个key value</span><br><span class="line">    map7["f"] = 6;//新增一个不存在的key</span><br><span class="line">//print(map7);//{a: 1, b: 2, c: 3, d: 4, e: 5, f: 6}</span><br></pre></td></tr></tbody></table></figure><h5 id="修改"><a href="#修改" class="headerlink" title="修改"></a><font color="#D2691E" size="4">修改</font></h5><h6 id="直接修改"><a href="#直接修改" class="headerlink" title="直接修改"></a>直接修改</h6><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Map<String,int> map8 = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">    map8["a"] = 11;</span><br><span class="line">    //print(map8);//{a: 11, b: 2, c: 3, d: 4, e: 5}</span><br></pre></td></tr></tbody></table></figure><h6 id="update-对指定的key的value做出修改"><a href="#update-对指定的key的value做出修改" class="headerlink" title="update() 对指定的key的value做出修改"></a>update() 对指定的key的value做出修改</h6><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"> Map<String,int> map = {"a":1,"b":2,"c":3};</span><br><span class="line">    int result3 = map.update("a", (value)=>(value*2));//key存在  根据参数函数修改其值</span><br><span class="line">//print(result3);//2</span><br><span class="line">//print(map);//{a: 2, b: 2, c: 3}</span><br><span class="line">//int result4 = map.update("d", (value)=>(value*2));//key不存在  报错</span><br><span class="line">    int result4 = map.update("d", (value)=>(value*2),ifAbsent: ()=>(10));//key不存在  但有ifAbsent参数 返回ifAbsent函数的值  并添加到map中</span><br><span class="line">//print(result4);//10</span><br><span class="line">//print(map23);//{a: 2, b: 2, c: 3, d: 10}</span><br></pre></td></tr></tbody></table></figure><h6 id="updateAll-根据参数函数的规则，批量修改map"><a href="#updateAll-根据参数函数的规则，批量修改map" class="headerlink" title="updateAll() 根据参数函数的规则，批量修改map"></a>updateAll() 根据参数函数的规则，批量修改map</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"> Map<String,int> map = {"a":1,"b":2,"c":3};</span><br><span class="line">     map.updateAll((String key,int value){</span><br><span class="line">       return value*2;</span><br><span class="line">     });//</span><br><span class="line"> //print(map);//{a: 2, b: 4, c: 6}</span><br><span class="line"> </span><br><span class="line"> Map<String,int> map2 = {"a":1,"b":2,"c":3};</span><br><span class="line">   map2.updateAll((String key,int value){</span><br><span class="line">     if(key=="a"){return 10;}</span><br><span class="line">     if(key=="b"){return 20;}</span><br><span class="line">     return value*2;</span><br><span class="line">   });//</span><br><span class="line">//print(map2);//{a: 10, b: 20, c: 6}</span><br></pre></td></tr></tbody></table></figure><h5 id="删除"><a href="#删除" class="headerlink" title="删除"></a><font color="#D2691E" size="4">删除</font></h5><h6 id="remove-删除一个key"><a href="#remove-删除一个key" class="headerlink" title="remove() 删除一个key"></a>remove() 删除一个key</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Map<String,int> map = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">map.remove("b");</span><br><span class="line">//print(map);//{a: 11, c: 3, d: 4, e: 5}</span><br></pre></td></tr></tbody></table></figure><h6 id="removeWhere-根据条件批量删除"><a href="#removeWhere-根据条件批量删除" class="headerlink" title="removeWhere() 根据条件批量删除"></a>removeWhere() 根据条件批量删除</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Map<String,int> map = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">    map.removeWhere((key,value)=>(value>3));//删除掉 符合参数函数的keyvalue对</span><br><span class="line">    //print(map);//{a: 1, b: 2, c: 3}</span><br></pre></td></tr></tbody></table></figure><h5 id="包含"><a href="#包含" class="headerlink" title="包含"></a><font color="#D2691E" size="4">包含</font></h5><h6 id="containsKey-是否包含key"><a href="#containsKey-是否包含key" class="headerlink" title="containsKey() 是否包含key"></a>containsKey() 是否包含key</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Map<String,int> map = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">//print(map.containsKey("a"));//true   是否包含key</span><br><span class="line">//print(map.containsKey("aa"));//false  是否包含key</span><br></pre></td></tr></tbody></table></figure><h6 id="containsValue-是否包含value值"><a href="#containsValue-是否包含value值" class="headerlink" title="containsValue() 是否包含value值"></a>containsValue() 是否包含value值</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> Map<String,int> map = {"a":1,"b":2,"c":3};</span><br><span class="line">//print(map.containsValue(1));//true</span><br><span class="line">//print(map.containsValue(4));//false</span><br></pre></td></tr></tbody></table></figure><h5 id="遍历"><a href="#遍历" class="headerlink" title="遍历"></a><font color="#D2691E" size="4">遍历</font></h5>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> Map<String,int> map = {"a":1,"b":2,"c":3,"d":4,"e":5};</span><br><span class="line">    map.forEach((String key,int value){</span><br><span class="line">print("$key  $value");</span><br><span class="line">//a  1</span><br><span class="line">//b  2</span><br><span class="line">//c  3</span><br><span class="line">//d  4</span><br><span class="line">//e  5</span><br><span class="line">    });</span><br></pre></td></tr></tbody></table></figure><h5 id="合并"><a href="#合并" class="headerlink" title="合并"></a><font color="#D2691E" size="4">合并</font></h5><h6 id="addAll-整体合并另一个map-泛型要一致"><a href="#addAll-整体合并另一个map-泛型要一致" class="headerlink" title="addAll() 整体合并另一个map 泛型要一致"></a>addAll() 整体合并另一个map 泛型要一致</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Map<String,int> map = {"a":1,"b":2,"c":3};</span><br><span class="line">    Map<String,int> other = {"a":1,"c":4,"d":7};</span><br><span class="line">    map.addAll(other);//key相同时value值后者覆盖前者，前者不存在时则添加进来</span><br><span class="line">//print(map);//{a: 1, b: 2, c: 4, d: 7}</span><br></pre></td></tr></tbody></table></figure><h6 id="addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者"><a href="#addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者" class="headerlink" title="addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者"></a>addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Map<String,int> map = {"a":1,"b":2,"c":3};</span><br><span class="line">    Map<String,int> map1 = {"a":1,"b":4,"d":3,"e":5};</span><br><span class="line">    map.addEntries(map1.entries);</span><br><span class="line">//print(map);//{a: 1, b: 4, c: 3, d: 3, e: 5}</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;h4 id=&quot;定义&quot;&gt;&lt;a href=&quot;#定义&quot; class=&quot;headerlink&quot; title=&quot;定义&quot;&gt;&lt;/a&gt;&lt;font color=&quot;#D2691E&quot; size=&quot;5&quot;&gt;定义&lt;/font&gt;&lt;/h4&gt;&lt;h5 id=&quot;不指
+      
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>Dart list</title>
@@ -58,9 +79,9 @@
       <category term="Dart" scheme="https://wesukilayezcy.github.io/categories/Dart/"/>
     
     
-      <category term="Dart" scheme="https://wesukilayezcy.github.io/tags/Dart/"/>
-    
       <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
+    
+      <category term="Dart" scheme="https://wesukilayezcy.github.io/tags/Dart/"/>
     
   </entry>
   
@@ -130,9 +151,9 @@
       <category term="Swift" scheme="https://wesukilayezcy.github.io/categories/Swift/"/>
     
     
-      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
-    
       <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
+    
+      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
     
   </entry>
   
@@ -465,31 +486,6 @@ UIView() ：类名（）与 alloc / init 等价&lt;/code&gt;&lt;/pre&gt;
     
     
       <category term="大数据" scheme="https://wesukilayezcy.github.io/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://wesukilayezcy.github.io/2019/07/08/hello-world/"/>
-    <id>https://wesukilayezcy.github.io/2019/07/08/hello-world/</id>
-    <published>2019-07-08T12:49:00.000Z</published>
-    <updated>2019-08-06T08:59:46.669Z</updated>
-    
-    <content type="html"><![CDATA[<html><head></head><body><p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></tbody></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p></body></html>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Che
-      
-    
-    </summary>
-    
-      <category term="hexo" scheme="https://wesukilayezcy.github.io/categories/hexo/"/>
-    
-    
-      <category term="hexo" scheme="https://wesukilayezcy.github.io/tags/hexo/"/>
     
   </entry>
   
