@@ -4,6 +4,13 @@
     <title><![CDATA[Dart 函数]]></title>
     <url>%2F2019%2F08%2F13%2FDart-%E5%87%BD%E6%95%B0%2F</url>
     <content type="text"><![CDATA[定义无返回值无参数1234567function_name() { //statements }或者void function_name() { //statements } 无返回值有参数1234test_param(int n1,String s1) { print(n1); print(s1); } 有返回值无参数1234String test() { // function definition return "hello world"; } 可选参数可选的位置参数要指定可选的位置参数，请使用方括号[ ] 123456789void main() { test_param(123); } test_param(n1,[s1]) { print(n1); print(s1); }//123 //null 可选的命名参数与位置参数不同，必须在传递值时指定参数名称。花括号{}可用于指定可选的命名参数。 123456789void main() { test_param(123); test_param(123,s1:'hello'); test_param(123,s2:'hello',s1:'world'); } test_param(n1,{s1,s2}) { print(n1); print(s1); } 带有默认值的可选参数默认情况下，还可以为函数参数指定值。 但是，这些参数也可以显式传递值。 1234567void main() { test_param(123); } void test_param(n1,{s1:12}) { print(n1); print(s1); } //123 12 箭头函数箭头函数只能有一行，可以省略大括号，在箭头(=>)和分号(;)之间只能出现表达式(而不是语句)。 1234567List l1 = [1, 2]; l1.forEach((item) { print(item); }); l1.forEach((item) => print(item)); 立即执行函数1234// 立即执行方法 ((name) { print('my name is ${name}'); })('postbird'); 闭包1234567891011121314// 闭包 Function getA() { int a = 0; return () { a++; print(a); }; } Function b = getA(); b(); b(); //输出1 2]]></content>
+      <categories>
+        <category>Dart</category>
+      </categories>
+      <tags>
+        <tag>Dart</tag>
+        <tag>函数</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Dart map]]></title>
@@ -50,8 +57,8 @@
         <category>Swift</category>
       </categories>
       <tags>
-        <tag>Swift</tag>
         <tag>字典</tag>
+        <tag>Swift</tag>
       </tags>
   </entry>
   <entry>
@@ -74,8 +81,8 @@
         <category>Swift</category>
       </categories>
       <tags>
-        <tag>String</tag>
         <tag>Swift</tag>
+        <tag>String</tag>
       </tags>
   </entry>
   <entry>

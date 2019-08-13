@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://wesukilayezcy.github.io/"/>
-  <updated>2019-08-13T01:43:39.630Z</updated>
+  <updated>2019-08-13T01:51:16.744Z</updated>
   <id>https://wesukilayezcy.github.io/</id>
   
   <author>
@@ -20,8 +20,8 @@
     <title>Dart 函数</title>
     <link href="https://wesukilayezcy.github.io/2019/08/13/Dart-%E5%87%BD%E6%95%B0/"/>
     <id>https://wesukilayezcy.github.io/2019/08/13/Dart-函数/</id>
-    <published>2019-08-13T01:26:23.000Z</published>
-    <updated>2019-08-13T01:43:39.630Z</updated>
+    <published>2019-08-13T01:26:00.000Z</published>
+    <updated>2019-08-13T01:51:16.744Z</updated>
     
     <content type="html"><![CDATA[<html><head></head><body><h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a><font color="#D2691E" size="5">定义</font></h4><h5 id="无返回值无参数"><a href="#无返回值无参数" class="headerlink" title="无返回值无参数"></a>无返回值无参数</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">function_name() {  </span><br><span class="line">   //statements      </span><br><span class="line">}</span><br><span class="line">或者</span><br><span class="line">void function_name() { </span><br><span class="line">   //statements </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><a id="more"></a><h5 id="无返回值有参数"><a href="#无返回值有参数" class="headerlink" title="无返回值有参数"></a>无返回值有参数</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">test_param(int n1,String s1) { </span><br><span class="line">   print(n1); </span><br><span class="line">   print(s1); </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h5 id="有返回值无参数"><a href="#有返回值无参数" class="headerlink" title="有返回值无参数"></a>有返回值无参数</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String test() { </span><br><span class="line">   // function definition </span><br><span class="line">   return "hello world"; </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h4 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a><font color="#D2691E" size="5">可选参数</font></h4><h5 id="可选的位置参数"><a href="#可选的位置参数" class="headerlink" title="可选的位置参数"></a>可选的位置参数</h5><p>要指定可选的位置参数，请使用方括号[ ]</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void main() { </span><br><span class="line">   test_param(123); </span><br><span class="line">} </span><br><span class="line">test_param(n1,[s1]) { </span><br><span class="line">   print(n1); </span><br><span class="line">   print(s1); </span><br><span class="line">}</span><br><span class="line">//123 </span><br><span class="line">//null</span><br></pre></td></tr></tbody></table></figure><h5 id="可选的命名参数"><a href="#可选的命名参数" class="headerlink" title="可选的命名参数"></a>可选的命名参数</h5><p>与位置参数不同，必须在传递值时指定参数名称。花括号{}可用于指定可选的命名参数。</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">void main() { </span><br><span class="line">   test_param(123); </span><br><span class="line">   test_param(123,s1:'hello'); </span><br><span class="line">   test_param(123,s2:'hello',s1:'world'); </span><br><span class="line">}  </span><br><span class="line">test_param(n1,{s1,s2}) { </span><br><span class="line">   print(n1); </span><br><span class="line">   print(s1); </span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><h5 id="带有默认值的可选参数"><a href="#带有默认值的可选参数" class="headerlink" title="带有默认值的可选参数"></a>带有默认值的可选参数</h5><p>默认情况下，还可以为函数参数指定值。 但是，这些参数也可以显式传递值。</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">void main() { </span><br><span class="line">   test_param(123); </span><br><span class="line">}  </span><br><span class="line">void test_param(n1,{s1:12}) { </span><br><span class="line">   print(n1); </span><br><span class="line">   print(s1); </span><br><span class="line">}   //123 12</span><br></pre></td></tr></tbody></table></figure><h4 id="箭头函数"><a href="#箭头函数" class="headerlink" title="箭头函数"></a><font color="#D2691E" size="5">箭头函数</font></h4><p>箭头函数只能有一行，可以省略大括号，在箭头(=>)和分号(;)之间只能出现表达式(而不是语句)。</p><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">List l1 = [1, 2];</span><br><span class="line"></span><br><span class="line"> l1.forEach((item) {</span><br><span class="line">   print(item);</span><br><span class="line"> });</span><br><span class="line"></span><br><span class="line"> l1.forEach((item) => print(item));</span><br></pre></td></tr></tbody></table></figure><h4 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a><font color="#D2691E" size="5">立即执行函数</font></h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">// 立即执行方法</span><br><span class="line">  ((name) {</span><br><span class="line">    print('my name is ${name}');</span><br><span class="line">  })('postbird');</span><br></pre></td></tr></tbody></table></figure><h4 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a><font color="#D2691E" size="5">闭包</font></h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// 闭包</span><br><span class="line"> Function getA() {</span><br><span class="line">   int a = 0;</span><br><span class="line">   return () {</span><br><span class="line">     a++;</span><br><span class="line">     print(a);</span><br><span class="line">   };</span><br><span class="line"> }</span><br><span class="line"></span><br><span class="line"> Function b = getA();</span><br><span class="line"> b();</span><br><span class="line"> b();</span><br><span class="line"> </span><br><span class="line"> //输出1 2</span><br></pre></td></tr></tbody></table></figure></body></html>]]></content>
     
@@ -31,6 +31,12 @@
     
     </summary>
     
+      <category term="Dart" scheme="https://wesukilayezcy.github.io/categories/Dart/"/>
+    
+    
+      <category term="Dart" scheme="https://wesukilayezcy.github.io/tags/Dart/"/>
+    
+      <category term="函数" scheme="https://wesukilayezcy.github.io/tags/%E5%87%BD%E6%95%B0/"/>
     
   </entry>
   
@@ -126,9 +132,9 @@
       <category term="Swift" scheme="https://wesukilayezcy.github.io/categories/Swift/"/>
     
     
-      <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
-    
       <category term="字典" scheme="https://wesukilayezcy.github.io/tags/%E5%AD%97%E5%85%B8/"/>
+    
+      <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
     
   </entry>
   
@@ -174,9 +180,9 @@
       <category term="Swift" scheme="https://wesukilayezcy.github.io/categories/Swift/"/>
     
     
-      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
-    
       <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
+    
+      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
     
   </entry>
   
