@@ -48,18 +48,18 @@
   };
 </script>
 
-  <meta name="description" content="定义不指定泛型12345678910111213	var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值   //print(map1);//{aa: aaa, bb: 22, cc: true}      Map map3 = {"a":"a1","b":"b1"};//直接赋初始值   //print(map3);//{a: a1, b: b1}">
-<meta name="keywords" content="iOS，Python,程序猿，编程，代码">
+  <meta name="description" content="定义不指定泛型12345678910111213	var map1 = &#123;&apos;aa&apos;:&apos;aaa&apos;,&apos;bb&apos;:22,&apos;cc&apos;:true&#125;;//直接赋初始值   //print(map1);//&#123;aa: aaa, bb: 22, cc: true&#125;      Map map3 = &#">
+<meta name="keywords" content="Dart,字典,Map">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Dart map">
 <meta property="og:url" content="https://wesukilayezcy.github.io/2019/08/12/Dart-map-1/index.html">
 <meta property="og:site_name" content="Wesukilaye">
-<meta property="og:description" content="定义不指定泛型12345678910111213	var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值   //print(map1);//{aa: aaa, bb: 22, cc: true}      Map map3 = {"a":"a1","b":"b1"};//直接赋初始值   //print(map3);//{a: a1, b: b1}">
+<meta property="og:description" content="定义不指定泛型12345678910111213	var map1 = &#123;&apos;aa&apos;:&apos;aaa&apos;,&apos;bb&apos;:22,&apos;cc&apos;:true&#125;;//直接赋初始值   //print(map1);//&#123;aa: aaa, bb: 22, cc: true&#125;      Map map3 = &#">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2019-08-13T01:15:32.431Z">
+<meta property="og:updated_time" content="2019-08-13T01:23:27.519Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Dart map">
-<meta name="twitter:description" content="定义不指定泛型12345678910111213	var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值   //print(map1);//{aa: aaa, bb: 22, cc: true}      Map map3 = {"a":"a1","b":"b1"};//直接赋初始值   //print(map3);//{a: a1, b: b1}">
+<meta name="twitter:description" content="定义不指定泛型12345678910111213	var map1 = &#123;&apos;aa&apos;:&apos;aaa&apos;,&apos;bb&apos;:22,&apos;cc&apos;:true&#125;;//直接赋初始值   //print(map1);//&#123;aa: aaa, bb: 22, cc: true&#125;      Map map3 = &#">
   <link rel="alternate" href="/atom.xml" title="Wesukilaye" type="application/atom+xml">
   <link rel="canonical" href="https://wesukilayezcy.github.io/2019/08/12/Dart-map-1/">
 
@@ -271,7 +271,7 @@
                 
               
 
-              <time title="创建时间：2019-08-12 18:00:35" itemprop="dateCreated datePublished" datetime="2019-08-12T18:00:35+08:00">2019-08-12</time>
+              <time title="创建时间：2019-08-12 18:00:00" itemprop="dateCreated datePublished" datetime="2019-08-12T18:00:00+08:00">2019-08-12</time>
             </span>
           
             
@@ -282,9 +282,22 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2019-08-13 09:15:32" itemprop="dateModified" datetime="2019-08-13T09:15:32+08:00">2019-08-13</time>
+                <time title="修改时间：2019-08-13 09:23:27" itemprop="dateModified" datetime="2019-08-13T09:23:27+08:00">2019-08-13</time>
               </span>
             
+          
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/Dart/" itemprop="url" rel="index"><span itemprop="name">Dart</span></a></span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -321,6 +334,8 @@
       
         <h4 id="定义"><a href="#定义" class="headerlink" title="定义"></a><font color="#D2691E" size="5">定义</font></h4><h5 id="不指定泛型"><a href="#不指定泛型" class="headerlink" title="不指定泛型"></a>不指定泛型</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">	var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值</span><br><span class="line">   //print(map1);//{aa: aaa, bb: 22, cc: true}</span><br><span class="line">   </span><br><span class="line">   Map map3 = {"a":"a1","b":"b1"};//直接赋初始值</span><br><span class="line">   //print(map3);//{a: a1, b: b1}</span><br><span class="line">   </span><br><span class="line">   var map2 = new Map();</span><br><span class="line">   map2['dd']=3.3;</span><br><span class="line">   map2[2] = 'ddd22';</span><br><span class="line">//print(map2);//{dd: 3.3, 2: ddd22}</span><br><span class="line">//print(map2[3]);//null   如果不存在，则是null</span><br><span class="line">   map2[3]= null;//key存在  value存在 value的值为null</span><br><span class="line">//print(map2.length);//3    长度</span><br></pre></td></tr></tbody></table></figure>
 
+<a id="more"></a>
+
 <h5 id="指定泛型"><a href="#指定泛型" class="headerlink" title="指定泛型"></a>指定泛型</h5><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var map1 = <string,string>{};</string,string></span><br><span class="line">   Map<int,string> map2 = new Map();</int,string></span><br><span class="line">   map2[1]="a";</span><br><span class="line">   map2[2] = "b";</span><br><span class="line">//print(map2);//{1: a, 2: b}</span><br><span class="line">   Map<string,int> map3 = {"a":1,"b":2};</string,int></span><br><span class="line">//print(map3);//{a: 1, b: 2}</span><br></pre></td></tr></tbody></table></figure>
 
 <h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a><font color="#D2691E" size="5">属性</font></h4><figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Map<string,int> map6 = {"a":1,"b":2};</string,int></span><br><span class="line">//print(map6.length);//2  长度</span><br><span class="line">//print(map6.isNotEmpty);//true  是否不为空</span><br><span class="line">//print(map6.isEmpty);//false   是否为空</span><br><span class="line">//print(map6.keys);//(a, b)   key的集合</span><br><span class="line">//print(map6.values);//(1, 2)  value的集合</span><br><span class="line">//print(map6.entries);//(MapEntry(a: 1), 	MapEntry(b: 2))   map迭代的键值对集合</span><br></pre></td></tr></tbody></table></figure>
@@ -350,9 +365,7 @@
 
 <h5 id="合并"><a href="#合并" class="headerlink" title="合并"></a><font color="#D2691E" size="4">合并</font></h5><h6 id="addAll-整体合并另一个map-泛型要一致"><a href="#addAll-整体合并另一个map-泛型要一致" class="headerlink" title="addAll() 整体合并另一个map 泛型要一致"></a>addAll() 整体合并另一个map 泛型要一致</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">Map<string,int> map = {"a":1,"b":2,"c":3};</string,int></span><br><span class="line">    Map<string,int> other = {"a":1,"c":4,"d":7};</string,int></span><br><span class="line">    map.addAll(other);//key相同时value值后者覆盖前者，前者不存在时则添加进来</span><br><span class="line">//print(map);//{a: 1, b: 2, c: 4, d: 7}</span><br></pre></td></tr></tbody></table></figure>
 
-<h6 id="addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者"><a href="#addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者" class="headerlink" title="addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者"></a>addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	Map<string,int> map = {"a":1,"b":2,"c":3};</string,int></span><br><span class="line">    Map<string,int> map1 = {"a":1,"b":4,"d":3,"e":5};</string,int></span><br><span class="line">    map.addEntries(map1.entries);</span><br><span class="line">//print(map);//{a: 1, b: 4, c: 3, d: 3, e: 5}</span><br></pre></td></tr></tbody></table></figure>
-
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script>
+<h6 id="addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者"><a href="#addEntries-合并两个map-如果key有重复，被合并的map的value覆盖前者" class="headerlink" title="addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者"></a>addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者</h6>  <figure class="highlight plain"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">	Map<string,int> map = {"a":1,"b":2,"c":3};</string,int></span><br><span class="line">    Map<string,int> map1 = {"a":1,"b":4,"d":3,"e":5};</string,int></span><br><span class="line">    map.addEntries(map1.entries);</span><br><span class="line">//print(map);//{a: 1, b: 4, c: 3, d: 3, e: 5}</span><br></pre></td></tr></tbody></table></figure><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","model":{"jsonPath":"/live2dw/assets/koharu.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false,"tagMode":false});</script>
     </div>
 
     
@@ -360,6 +373,16 @@
     
 
     <footer class="post-footer">
+          
+        
+        <div class="post-tags">
+            <a href="/tags/Dart/" rel="tag">~ Dart</a>
+          
+            <a href="/tags/字典/" rel="tag">~ 字典</a>
+          
+            <a href="/tags/Map/" rel="tag">~ Map</a>
+          
+        </div>
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
               <a href="/2019/08/08/Dart-数值类型/" rel="next" title="Dart list">
@@ -371,6 +394,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+              <a href="/2019/08/13/Dart-函数/" rel="prev" title="Dart 函数">
+                Dart 函数 <i class="fa fa-chevron-right"></i>
+              </a>
+            
           </div>
         </div>
     </footer>
@@ -435,7 +462,7 @@
         
           <a href="/archives/">
         
-          <span class="site-state-item-count">21</span>
+          <span class="site-state-item-count">22</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -501,7 +528,7 @@
         
           
         
-        <span class="site-state-item-count">13</span>
+        <span class="site-state-item-count">14</span>
         <span class="site-state-item-name">标签</span>
         </a>
       </div>
@@ -602,12 +629,12 @@
     <span class="post-meta-item-icon">
       <i class="fa fa-area-chart"></i>
     </span>
-    <span title="站点总字数">59k</span>
+    <span title="站点总字数">61k</span>
     <span class="post-meta-divider">|</span>
     <span class="post-meta-item-icon">
       <i class="fa fa-coffee"></i>
     </span>
-    <span title="站点阅读时长">54 分钟</span>
+    <span title="站点阅读时长">55 分钟</span>
 </div>
   <div class="powered-by">由 <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> 强力驱动 v3.9.0</div>
   <span class="post-meta-divider">|</span>

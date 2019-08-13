@@ -1,9 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[Dart 函数]]></title>
+    <url>%2F2019%2F08%2F13%2FDart-%E5%87%BD%E6%95%B0%2F</url>
+    <content type="text"><![CDATA[定义无返回值无参数1234567function_name() { //statements }或者void function_name() { //statements } 无返回值有参数1234test_param(int n1,String s1) { print(n1); print(s1); } 有返回值无参数1234String test() { // function definition return "hello world"; } 可选参数可选的位置参数要指定可选的位置参数，请使用方括号[ ] 123456789void main() { test_param(123); } test_param(n1,[s1]) { print(n1); print(s1); }//123 //null 可选的命名参数与位置参数不同，必须在传递值时指定参数名称。花括号{}可用于指定可选的命名参数。 123456789void main() { test_param(123); test_param(123,s1:'hello'); test_param(123,s2:'hello',s1:'world'); } test_param(n1,{s1,s2}) { print(n1); print(s1); } 带有默认值的可选参数默认情况下，还可以为函数参数指定值。 但是，这些参数也可以显式传递值。 1234567void main() { test_param(123); } void test_param(n1,{s1:12}) { print(n1); print(s1); } //123 12 箭头函数箭头函数只能有一行，可以省略大括号，在箭头(=>)和分号(;)之间只能出现表达式(而不是语句)。 1234567List l1 = [1, 2]; l1.forEach((item) { print(item); }); l1.forEach((item) => print(item)); 立即执行函数1234// 立即执行方法 ((name) { print('my name is ${name}'); })('postbird'); 闭包1234567891011121314// 闭包 Function getA() { int a = 0; return () { a++; print(a); }; } Function b = getA(); b(); b(); //输出1 2]]></content>
+  </entry>
+  <entry>
     <title><![CDATA[Dart map]]></title>
     <url>%2F2019%2F08%2F12%2FDart-map-1%2F</url>
     <content type="text"><![CDATA[定义不指定泛型12345678910111213 var map1 = {'aa':'aaa','bb':22,'cc':true};//直接赋初始值 //print(map1);//{aa: aaa, bb: 22, cc: true} Map map3 = {"a":"a1","b":"b1"};//直接赋初始值 //print(map3);//{a: a1, b: b1} var map2 = new Map(); map2['dd']=3.3; map2[2] = 'ddd22';//print(map2);//{dd: 3.3, 2: ddd22}//print(map2[3]);//null 如果不存在，则是null map2[3]= null;//key存在 value存在 value的值为null//print(map2.length);//3 长度 指定泛型1234567var map1 = {}; Map map2 = new Map(); map2[1]="a"; map2[2] = "b";//print(map2);//{1: a, 2: b} Map map3 = {"a":1,"b":2};//print(map3);//{a: 1, b: 2} 属性12345678Map map6 = {"a":1,"b":2};//print(map6.length);//2 长度//print(map6.isNotEmpty);//true 是否不为空//print(map6.isEmpty);//false 是否为空//print(map6.keys);//(a, b) key的集合//print(map6.values);//(1, 2) value的集合//print(map6.entries);//(MapEntry(a: 1), MapEntry(b: 2)) map迭代的键值对集合 方法增加1234 Map map7 = {"a":1,"b":2,"c":3,"d":4,"e":5}; //新增一个key value map7["f"] = 6;//新增一个不存在的key//print(map7);//{a: 1, b: 2, c: 3, d: 4, e: 5, f: 6} 修改直接修改123Map map8 = {"a":1,"b":2,"c":3,"d":4,"e":5}; map8["a"] = 11; //print(map8);//{a: 11, b: 2, c: 3, d: 4, e: 5} update() 对指定的key的value做出修改12345678 Map map = {"a":1,"b":2,"c":3}; int result3 = map.update("a", (value)=>(value*2));//key存在 根据参数函数修改其值//print(result3);//2//print(map);//{a: 2, b: 2, c: 3}//int result4 = map.update("d", (value)=>(value*2));//key不存在 报错 int result4 = map.update("d", (value)=>(value*2),ifAbsent: ()=>(10));//key不存在 但有ifAbsent参数 返回ifAbsent函数的值 并添加到map中//print(result4);//10//print(map23);//{a: 2, b: 2, c: 3, d: 10} updateAll() 根据参数函数的规则，批量修改map 12345678910111213 Map map = {"a":1,"b":2,"c":3}; map.updateAll((String key,int value){ return value*2; });// //print(map);//{a: 2, b: 4, c: 6} Map map2 = {"a":1,"b":2,"c":3}; map2.updateAll((String key,int value){ if(key=="a"){return 10;} if(key=="b"){return 20;} return value*2; });////print(map2);//{a: 10, b: 20, c: 6} 删除remove() 删除一个key 123Map map = {"a":1,"b":2,"c":3,"d":4,"e":5};map.remove("b");//print(map);//{a: 11, c: 3, d: 4, e: 5} removeWhere() 根据条件批量删除 123Map map = {"a":1,"b":2,"c":3,"d":4,"e":5}; map.removeWhere((key,value)=>(value>3));//删除掉 符合参数函数的keyvalue对 //print(map);//{a: 1, b: 2, c: 3} 包含containsKey() 是否包含key 123Map map = {"a":1,"b":2,"c":3,"d":4,"e":5};//print(map.containsKey("a"));//true 是否包含key//print(map.containsKey("aa"));//false 是否包含key containsValue() 是否包含value值 123 Map map = {"a":1,"b":2,"c":3};//print(map.containsValue(1));//true//print(map.containsValue(4));//false 遍历 123456789 Map map = {"a":1,"b":2,"c":3,"d":4,"e":5}; map.forEach((String key,int value){ print("$key $value");//a 1//b 2//c 3//d 4//e 5 }); 合并addAll() 整体合并另一个map 泛型要一致 12345Map map = {"a":1,"b":2,"c":3}; Map other = {"a":1,"c":4,"d":7}; map.addAll(other);//key相同时value值后者覆盖前者，前者不存在时则添加进来//print(map);//{a: 1, b: 2, c: 4, d: 7} addEntries() 合并两个map 如果key有重复，被合并的map的value覆盖前者 1234 Map map = {"a":1,"b":2,"c":3}; Map map1 = {"a":1,"b":4,"d":3,"e":5}; map.addEntries(map1.entries);//print(map);//{a: 1, b: 4, c: 3, d: 3, e: 5}]]></content>
+      <categories>
+        <category>Dart</category>
+      </categories>
+      <tags>
+        <tag>Dart</tag>
+        <tag>字典</tag>
+        <tag>Map</tag>
+      </tags>
   </entry>
   <entry>
     <title><![CDATA[Dart list]]></title>
@@ -25,8 +38,8 @@
         <category>Dart</category>
       </categories>
       <tags>
-        <tag>String</tag>
         <tag>Dart</tag>
+        <tag>String</tag>
       </tags>
   </entry>
   <entry>
@@ -61,8 +74,8 @@
         <category>Swift</category>
       </categories>
       <tags>
-        <tag>Swift</tag>
         <tag>String</tag>
+        <tag>Swift</tag>
       </tags>
   </entry>
   <entry>
