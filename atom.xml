@@ -10,7 +10,7 @@
   <id>https://wesukilayezcy.github.io/</id>
   
   <author>
-    <name>Mr.Zhao</name>
+    <name>Wesukilaye</name>
     
   </author>
   
@@ -161,9 +161,9 @@
       <category term="Swift" scheme="https://wesukilayezcy.github.io/categories/Swift/"/>
     
     
-      <category term="字典" scheme="https://wesukilayezcy.github.io/tags/%E5%AD%97%E5%85%B8/"/>
-    
       <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
+    
+      <category term="字典" scheme="https://wesukilayezcy.github.io/tags/%E5%AD%97%E5%85%B8/"/>
     
   </entry>
   
@@ -209,9 +209,9 @@
       <category term="Swift" scheme="https://wesukilayezcy.github.io/categories/Swift/"/>
     
     
-      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
-    
       <category term="Swift" scheme="https://wesukilayezcy.github.io/tags/Swift/"/>
+    
+      <category term="String" scheme="https://wesukilayezcy.github.io/tags/String/"/>
     
   </entry>
   
