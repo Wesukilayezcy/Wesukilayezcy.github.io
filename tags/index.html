@@ -14,8 +14,12 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
   <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2">
+      
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-center-atom.css">
 
 
 <script id="hexo-configurations">
@@ -345,7 +349,7 @@
             </div>
             <div class="tag-cloud-tags">
               
-                <a href="/tags/Dart/" style="font-size: 21px; color: #6f6f6f">Dart</a> <a href="/tags/Map/" style="font-size: 12px; color: #ccc">Map</a> <a href="/tags/String/" style="font-size: 16.5px; color: #9d9d9d">String</a> <a href="/tags/Swift/" style="font-size: 30px; color: #111">Swift</a> <a href="/tags/for循环/" style="font-size: 12px; color: #ccc">for循环</a> <a href="/tags/guard-let/" style="font-size: 12px; color: #ccc">guard let</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/if-let/" style="font-size: 12px; color: #ccc">if let</a> <a href="/tags/list/" style="font-size: 12px; color: #ccc">list</a> <a href="/tags/switch/" style="font-size: 12px; color: #ccc">switch</a> <a href="/tags/三目/" style="font-size: 12px; color: #ccc">三目</a> <a href="/tags/函数/" style="font-size: 12px; color: #ccc">函数</a> <a href="/tags/大数据/" style="font-size: 25.5px; color: #404040">大数据</a> <a href="/tags/字典/" style="font-size: 16.5px; color: #9d9d9d">字典</a> <a href="/tags/数组/" style="font-size: 12px; color: #ccc">数组</a> <a href="/tags/泛型/" style="font-size: 12px; color: #ccc">泛型</a>
+                <a href="/tags/Dart/" style="font-size: 21px; color: #90ffa7">Dart</a> <a href="/tags/Map/" style="font-size: 12px; color: #a8ff78">Map</a> <a href="/tags/String/" style="font-size: 16.5px; color: #9cff90">String</a> <a href="/tags/Swift/" style="font-size: 30px; color: #78ffd6">Swift</a> <a href="/tags/for循环/" style="font-size: 12px; color: #a8ff78">for循环</a> <a href="/tags/guard-let/" style="font-size: 12px; color: #a8ff78">guard let</a> <a href="/tags/hexo/" style="font-size: 12px; color: #a8ff78">hexo</a> <a href="/tags/if-let/" style="font-size: 12px; color: #a8ff78">if let</a> <a href="/tags/list/" style="font-size: 12px; color: #a8ff78">list</a> <a href="/tags/switch/" style="font-size: 12px; color: #a8ff78">switch</a> <a href="/tags/三目/" style="font-size: 12px; color: #a8ff78">三目</a> <a href="/tags/函数/" style="font-size: 12px; color: #a8ff78">函数</a> <a href="/tags/大数据/" style="font-size: 25.5px; color: #84ffbf">大数据</a> <a href="/tags/字典/" style="font-size: 16.5px; color: #9cff90">字典</a> <a href="/tags/数组/" style="font-size: 12px; color: #a8ff78">数组</a> <a href="/tags/泛型/" style="font-size: 12px; color: #a8ff78">泛型</a>
               
             </div>
           </div>
@@ -367,6 +371,9 @@
 </div>
 
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
 
         </div>
@@ -541,7 +548,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 7268721 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -672,6 +679,26 @@
 <script src="/js/post-details.js?v=7.3.0"></script>
 
   
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: 'c7c973c24bc9205898cb',
+      clientSecret: '166e786b733ee772a5e79c49a7e3ff6a5a5ae9e8',
+      repo: 'Wesukilayezcy.github.io',
+      owner: 'Wesukilayezcy',
+      admin: ['Wesukilayezcy'],
+      id: 'f47af1d1eda4d807b02bba32be15120b',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 
 

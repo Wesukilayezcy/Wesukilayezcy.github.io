@@ -14,8 +14,12 @@
 
 <link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.7.0">
   <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
-  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
-  <link rel="stylesheet" href="/lib/pace/pace-theme-center-atom.min.css?v=1.0.2">
+      
+    
+      
+    
+  <script src="//cdn.jsdelivr.net/npm/pace-js@1/pace.min.js"></script>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/pace-js@1/themes/blue/pace-theme-center-atom.css">
 
 
 <script id="hexo-configurations">
@@ -292,6 +296,9 @@
 </div>
 
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
 
         </div>
@@ -466,7 +473,7 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">© 7268721 – <span itemprop="copyrightYear">2019</span>
+        <div class="copyright">© <span itemprop="copyrightYear">2019</span>
   <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
@@ -597,6 +604,26 @@
 <script src="/js/post-details.js?v=7.3.0"></script>
 
   
+
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', function() {
+    var gitalk = new Gitalk({
+      clientID: 'c7c973c24bc9205898cb',
+      clientSecret: '166e786b733ee772a5e79c49a7e3ff6a5a5ae9e8',
+      repo: 'Wesukilayezcy.github.io',
+      owner: 'Wesukilayezcy',
+      admin: ['Wesukilayezcy'],
+      id: '3be7aa98d992907175cbd79c194399f2',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 
 
